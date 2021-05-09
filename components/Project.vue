@@ -69,6 +69,7 @@ export default {
             "-rotate-12",
             "group-hover:rotate-12",
             "group-hover:scale-125",
+            "opacity-50",
           ];
         case "3":
           return [
@@ -79,6 +80,7 @@ export default {
             "-rotate-12",
             "group-hover:rotate-12",
             "group-hover:scale-125",
+            "opacity-50",
           ];
         case "4":
           return [
