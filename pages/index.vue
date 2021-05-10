@@ -41,7 +41,7 @@ export default {
           link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
         },
         {
-          title: "Open Source Federated Learning Pytorch Framework",
+          title: "Federated Learning Framework",
           subtitle:
             "Designed, implemented, and tested an algorithm for training a Convolutional Neural Network in a distributed manner (Federated Learning).",
           link: "https://github.com/gferrate/pytorch_federated_learning",
@@ -65,7 +65,7 @@ export default {
         {
           title: "Hodor",
           subtitle:
-            "I engineered a system to open and close BMAT’s headquerter’s office with auth0 autentication and access control (taking into account geolocation).",
+            "I engineered a system to open and close BMAT’s headquarter’s office with auth0 autentication and access control (taking into account geolocation).",
           link: "https://www.youtube.com/watch?v=_1j-8boMRDQ",
           type: "2",
         },
