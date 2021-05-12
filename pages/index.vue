@@ -76,6 +76,13 @@ export default {
           link: "https://my-friend-is-on-a-dating-app.com/",
           type: "3",
         },
+        {
+          title: "The Bus Game",
+          subtitle:
+            "A classic Spanish cards game made online during the quarintine! The repo is open (click).",
+          link: "https://github.com/gferrate/juego_del_bus",
+          type: "4",
+        },
       ],
     };
   },
