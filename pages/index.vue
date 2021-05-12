@@ -60,28 +60,28 @@ export default {
             "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes of a given post.",
           link:
             "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
-          type: "1",
+          type: "5",
         },
         {
           title: "Hodor",
           subtitle:
             "I engineered a system to open and close BMAT’s headquarter’s office with auth0 autentication and access control (taking into account geolocation).",
           link: "https://www.youtube.com/watch?v=_1j-8boMRDQ",
-          type: "2",
+          type: "6",
         },
         {
           title: "My Friend Is on Tinder",
           subtitle:
             "A prank webpage for creating fake tinder profiles (for jokes).",
           link: "https://my-friend-is-on-a-dating-app.com/",
-          type: "3",
+          type: "7",
         },
         {
           title: "The Bus Game",
           subtitle:
             "A classic Spanish cards game made online during the quarintine! The repo is open (click).",
           link: "https://github.com/gferrate/juego_del_bus",
-          type: "4",
+          type: "8",
         },
       ],
     };

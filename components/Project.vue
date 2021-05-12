@@ -93,6 +93,61 @@ export default {
             "group-hover:scale-125",
             "opacity-50",
           ];
+        case "5":
+          return [
+            "right-0",
+            "bg-purple-500",
+            "w-32",
+            "h-16",
+            "-rotate-12",
+            "group-hover:rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
+        case "5":
+          return [
+            "left-0",
+            "bg-gray-500",
+            "w-6",
+            "h-32",
+            "-rotate-12",
+            "group-hover:rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
+        case "6":
+          return [
+            "right-0",
+            "bg-gray-500",
+            "w-32",
+            "h-32",
+            "-rotate-12",
+            "group-hover:rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
+        case "7":
+          return [
+            "bottom-0",
+            "bg-indigo-500",
+            "w-16",
+            "h-16",
+            "-rotate-12",
+            "group-hover:rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
+        case "8":
+          return [
+            "right-0",
+            "bg-pink-500",
+            "w-64",
+            "h-32",
+            "-rotate-12",
+            "group-hover:rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
       }
     },
     getClasses2() {
@@ -142,6 +197,54 @@ export default {
             "group-hover:scale-125",
             "opacity-50",
           ];
+        case "5":
+          return [
+            "right-0",
+            "bottom-0",
+            "bg-purple-500",
+            "w-52",
+            "h-32",
+            "-rotate-6",
+            "group-hover:-rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
+        case "6":
+          return [
+            "right-0",
+            "bottom-0",
+            "bg-gray-500",
+            "w-12",
+            "h-52",
+            "rotate-6",
+            "group-hover:-rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
+        case "7":
+          return [
+            "right-0",
+            "bottom-0",
+            "bg-indigo-500",
+            "w-52",
+            "h-52",
+            "rotate-6",
+            "group-hover:-rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
+        case "8":
+          return [
+            "top-0",
+            "left-0",
+            "bg-pink-500",
+            "w-12",
+            "h-52",
+            "rotate-12",
+            "group-hover:-rotate-12",
+            "group-hover:scale-125",
+            "opacity-50",
+          ];
       }
     },
     getClasses3() {
@@ -185,6 +288,48 @@ export default {
             "bg-yellow-600",
             "w-20",
             "h-20",
+            "rounded-full",
+            "group-hover:scale-150",
+            "opacity-50",
+          ];
+        case "5":
+          return [
+            "bottom-0",
+            "bg-purple-600",
+            "w-32",
+            "h-32",
+            "rounded-full",
+            "group-hover:scale-150",
+            "opacity-50",
+          ];
+        case "6":
+          return [
+            "top-0",
+            "left-1",
+            "bg-gray-600",
+            "w-40",
+            "h-40",
+            "rounded-full",
+            "group-hover:scale-150",
+            "opacity-50",
+          ];
+        case "7":
+          return [
+            "right-0",
+            "bg-indigo-600",
+            "w-32",
+            "h-32",
+            "rounded-full",
+            "group-hover:scale-150",
+            "opacity-50",
+          ];
+        case "8":
+          return [
+            "right-0",
+            "bottom-1",
+            "bg-pink-600",
+            "w-40",
+            "h-40",
             "rounded-full",
             "group-hover:scale-150",
             "opacity-50",
