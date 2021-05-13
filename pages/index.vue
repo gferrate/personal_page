@@ -1,22 +1,20 @@
 <template>
-  <div class="h-full">
-    <div class="h-full pb-16">
-      <div class="text-2xl mt-16 text-center px-4">
-        These are some of my personal projects:
-      </div>
-      <div class="text-sm mt-2 text-center px-4 text-gray-600">
-        (Click projects to get more info)
-      </div>
-      <div class="flex justify-center w-full mt-6 flex-wrap">
-        <project
-          v-for="proj in projects"
-          :key="proj.title"
-          :title="proj.title"
-          :subtitle="proj.subtitle"
-          :link="proj.link"
-          :type="proj.type"
-        />
-      </div>
+  <div class="h-full pb-16">
+    <div class="text-2xl mt-16 text-center px-4">
+      These are some of my personal projects:
+    </div>
+    <div class="text-sm mt-2 text-center px-4 text-gray-600">
+      (Click projects to get more info)
+    </div>
+    <div class="flex justify-center w-full mt-6 flex-wrap">
+      <project
+        v-for="proj in projects"
+        :key="proj.title"
+        :title="proj.title"
+        :subtitle="proj.subtitle"
+        :link="proj.link"
+        :type="proj.type"
+      />
     </div>
   </div>
 </template>
