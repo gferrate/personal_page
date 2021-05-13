@@ -13,7 +13,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'A short description of my myself.' }
+      { hid: 'description', name: 'description', content: 'A short description of myself.' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/gf_favicon_2.png' },
