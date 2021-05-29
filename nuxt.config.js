@@ -33,7 +33,12 @@ export default {
 
   buildModules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics'
   ],
+
+  googleAnalytics: {
+    id: 'G-Q4GFBE34GE'
+  },
 
   tailwindcss: {
     jit: true
