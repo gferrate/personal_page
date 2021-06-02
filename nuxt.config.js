@@ -37,7 +37,10 @@ export default {
   ],
 
   googleAnalytics: {
-    id: 'G-Q4GFBE34GE'
+    id: 'G-Q4GFBE34GE',
+    debug: {
+      sendHitTask: process.env.NODE_ENV !== 'development'
+    }
   },
 
   tailwindcss: {
