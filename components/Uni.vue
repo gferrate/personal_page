@@ -9,14 +9,14 @@
       flex flex-col
       items-start
       shadow-md
-	  hover:shadow-lg
-	  transition
-	  duration-500
+      hover:shadow-lg
+      transition
+      duration-500
     "
   >
     <div class="flex justify-center items-center space-x-2">
       <div
-        class="w-8 h-8 bg-no-repeat bg-center bg-contain flex-none"
+        class="w-8 h-8 bg-no-repeat bg-center bg-contain flex-none rounded-full"
         :style="{ backgroundImage: `url(${imgPath})` }"
       ></div>
       <div class="text-tiny text-gray-500 text-left uppercase">

@@ -64,6 +64,30 @@
       </div>
     </section>
 
+    <section id="this-is-my-work-experience" class="py-6 relative">
+      <Title class="">These are my work experiences:</Title>
+      <div
+        class="
+          mt-1
+          sm:mt-6
+          flex
+          justify-center
+          items-center
+          flex-wrap
+          sm:flex-nowrap
+          space-y-4
+          sm:space-y-0
+          p-1
+        "
+      >
+        <LinePath :dashed="true" circles="right" />
+        <Uni :img-path="images.caixaLogo" :info="works.caixa" />
+        <LinePath />
+        <Uni :img-path="images.bmatLogo" :info="works.bmat" />
+        <LinePath :dashed="true" circles="left" />
+      </div>
+    </section>
+
     <section id="this-is-my-path" class="py-6">
       <Title class="">These are some of my personal projects:</Title>
       <h2 class="text-sm mt-2 text-center px-4 text-gray-600">
@@ -91,6 +115,8 @@ import githubLogo from "~/assets/img/github_logo.png";
 import upcLogo from "~/assets/img/upc_logo.png";
 import purdueLogo from "~/assets/img/purdue_logo.png";
 import kingsLogo from "~/assets/img/kings_logo.jpeg";
+import caixaLogo from "~/assets/img/caixabank_logo.png";
+import bmatLogo from "~/assets/img/bmat_logo.jpeg";
 
 export default {
   data: function () {
@@ -103,6 +129,22 @@ export default {
         upcLogo: upcLogo,
         purdueLogo: purdueLogo,
         kingsLogo: kingsLogo,
+        caixaLogo: caixaLogo,
+        bmatLogo: bmatLogo,
+      },
+      works: {
+        caixa: {
+          name: "Caixabank Consumer Finance",
+          degree: "Business Intelligence Intern",
+          country: "Barcelona",
+          year: 2017,
+        },
+        bmat: {
+          name: "BMAT Music Innovators",
+          degree: "Software Engineer",
+          country: "Barcelona",
+          year: 2017,
+        },
       },
       unis: {
         upc: {
