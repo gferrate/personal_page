@@ -1,8 +1,40 @@
 <template>
   <div class="h-full pb-16">
-    <div class="text-2xl mt-16 text-center px-4">
-      These are some of my personal projects:
+    <Title class="mt-6">This is me:</Title>
+    <div
+      class="
+        flex flex-col
+        md:flex-row
+        justify-center
+        items-center
+        space-y-4
+        md:space-y-0
+        space-x-0
+        md:space-x-6
+        mt-6
+      "
+    >
+      <me size="lg" :img-path="images.me"></me>
+      <div
+        class="
+          flex
+          justify-center
+          items-center
+          flex-row
+          md:flex-col
+          space-y-0
+          md:space-y-3
+          space-x-3
+          md:space-x-0
+        "
+      >
+        <me size="sm" :img-path="images.email" :href="links.email"></me>
+        <me size="sm" :img-path="images.linkedin" :href="links.linkedin"></me>
+        <me size="sm" :img-path="images.github" :href="links.github"></me>
+      </div>
     </div>
+
+    <Title class="mt-12">These are some of my personal projects:</Title>
     <div class="text-sm mt-2 text-center px-4 text-gray-600">
       (Click projects to get more info)
     </div>
@@ -20,9 +52,24 @@
 </template>
 
 <script>
+import meImg from "~/assets/img/jo_low_res.jpg";
+import linkedinImg from "~/assets/img/linkedin_logo_sq.png";
+import emailLogo from "~/assets/img/email_icon.png";
+import githubLogo from "~/assets/img/github_logo.png";
 export default {
   data: function () {
     return {
+      images: {
+        me: meImg,
+        linkedin: linkedinImg,
+        email: emailLogo,
+        github: githubLogo,
+      },
+      links: {
+        linkedin: "https://www.linkedin.com/in/gferrate/",
+        email: "mailto:g.ferrate.c@gmail.com",
+        github: "https://github.com/gferrate",
+      },
       projects: [
         {
           title: "Royalties Calculator",
@@ -56,8 +103,7 @@ export default {
           title: "View Instagram Likes",
           subtitle:
             "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes of a given post.",
-          link:
-            "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
+          link: "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
           type: "5",
         },
         {
