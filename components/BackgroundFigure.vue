@@ -7,7 +7,7 @@
       ease-in-out
       z-10
       absolute
-      opacity-20
+      opacity-10
       group-hover:rotate-12 group-hover:scale-125
     "
     :class="getRandomClasses()"
