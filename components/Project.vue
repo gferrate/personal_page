@@ -3,7 +3,7 @@
     class="
       w-64
       h-52
-      bg-gray-50
+      bg-gray-100
       rounded-xl
       p-2
       shadow-md

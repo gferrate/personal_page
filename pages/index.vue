@@ -140,14 +140,14 @@ export default {
           degree: "Business Intelligence Intern",
           country: "Barcelona",
           year: 2017,
-          color: "bg-red-500"
+          color: "bg-blue-500"
         },
         personal: {
           name: "Personal Projects",
           degree: "All kinds of things",
           country: "The Globe",
           year: 2015,
-          color: "bg-blue-500"
+          color: "bg-gray-500"
         },
         bmat: {
           name: "BMAT Music Innovators",
@@ -163,28 +163,28 @@ export default {
           degree: "Telecommunications Engineering",
           country: "Barcelona",
           year: 2014,
-          color: "bg-gray-500"
+          color: "bg-blue-500"
         },
         purdue: {
           name: "Purdue University",
           degree: "Final degree project",
           country: "United States",
           year: 2018,
-          color: "bg-purple-500"
+          color: "bg-yellow-500"
         },
         upc_master: {
           name: "Polytechnic University of Catalonia",
           degree: "MSE Artificial Intelligence",
           country: "Barcelona",
           year: 2019,
-          color: "bg-yellow-500"
+          color: "bg-blue-500"
         },
         kings: {
           name: "King's College London",
           degree: "Exchange Research Student",
           country: "London",
           year: 2020,
-          color: "bg-indigo-500"
+          color: "bg-red-500"
         },
       },
       links: {

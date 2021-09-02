@@ -11,6 +11,7 @@
       hover:scale-110
       transform
       duration-500
+      z-20
     "
     :class="getDynamicClasses()"
     :style="{ backgroundImage: `url(${imgPath})` }"

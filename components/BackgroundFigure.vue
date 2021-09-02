@@ -7,7 +7,6 @@
       ease-in-out
       z-10
       absolute
-      opacity-10
       group-hover:rotate-12 group-hover:scale-125
     "
     :class="getRandomClasses()"
@@ -58,7 +57,16 @@ export default {
       rounding: ["none", "full"],
     };
   },
-  props: ["color"],
+  props: {
+    color: {
+      type: String,
+      default: null,
+    },
+    opacity: {
+      type: String,
+      default: "opacity-10",
+    },
+  },
   methods: {
     getRandomClasses() {
       // Position
@@ -71,6 +79,7 @@ export default {
         this.randomChoice(this.positioning.top),
         this.randomChoice(this.positioning.rotate),
         this.color || this.randomChoice(this.colors),
+        this.opacity,
         height,
         width,
         `rounded-${rounding}`,

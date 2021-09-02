@@ -2,7 +2,7 @@
   <div
     class="
       w-40
-      bg-gray-50
+      bg-gray-100
       rounded-xl
       p-2
       text-center
