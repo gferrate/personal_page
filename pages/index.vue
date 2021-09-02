@@ -40,13 +40,11 @@
       <Title class="">This is my path:</Title>
       <div
         class="
-          mt-1
-          sm:mt-6
-          flex
+          mt-6
+          flex flex-col
+          sm:flex-row
           justify-center
           items-center
-          flex-wrap
-          sm:flex-nowrap
           space-y-4
           sm:space-y-0
           p-1
@@ -68,9 +66,9 @@
       <Title class="">These are my work experiences:</Title>
       <div
         class="
-          mt-1
-          sm:mt-6
-          flex
+          mt-6
+          flex flex-col
+          sm:flex-row
           justify-center
           items-center
           flex-wrap

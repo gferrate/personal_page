@@ -1,5 +1,9 @@
 <template>
-  <svg :height="dimensions.height" :width="dimensions.width">
+  <svg
+    :height="dimensions.height"
+    :width="dimensions.width"
+    class="transform rotate-90 sm:rotate-0"
+  >
     <line
       x1="0"
       :y1="dimensions.height / 2"
@@ -35,7 +39,7 @@ export default {
         width: 40,
         height: 8,
       },
-      color: "black",
+      color: "gray",
       strokeWidth: 3,
     };
   },
