@@ -19,7 +19,11 @@ module.exports = {
       colors: {},
       fontFamily: {
         sans: ["Roboto Mono", "monospace", ...defaultTheme.fontFamily.sans]
+      },
+      fontSize: {
+        'tiny': '.6rem',
       }
+
     }
   },
   variants: {

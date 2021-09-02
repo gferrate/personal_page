@@ -1,53 +1,85 @@
 <template>
   <div class="h-full pb-16">
-    <Title class="mt-6">This is me:</Title>
-    <div
-      class="
-        flex flex-col
-        md:flex-row
-        justify-center
-        items-center
-        space-y-4
-        md:space-y-0
-        space-x-0
-        md:space-x-6
-        mt-6
-      "
-    >
-      <me size="lg" :img-path="images.me"></me>
+    <section id="this-is-me" class="py-6">
+      <Title class="">This is me:</Title>
       <div
         class="
+          flex flex-col
+          md:flex-row
+          justify-center
+          items-center
+          space-y-4
+          md:space-y-0
+          space-x-0
+          md:space-x-6
+          mt-6
+        "
+      >
+        <me size="lg" :img-path="images.me"></me>
+        <div
+          class="
+            flex
+            justify-center
+            items-center
+            flex-row
+            md:flex-col
+            space-y-0
+            md:space-y-3
+            space-x-3
+            md:space-x-0
+          "
+        >
+          <me size="sm" :img-path="images.email" :href="links.email"></me>
+          <me size="sm" :img-path="images.linkedin" :href="links.linkedin"></me>
+          <me size="sm" :img-path="images.github" :href="links.github"></me>
+        </div>
+      </div>
+    </section>
+
+    <section id="this-is-my-path" class="py-6 relative">
+      <Title class="">This is my path:</Title>
+      <div
+        class="
+          mt-1
+          sm:mt-6
           flex
           justify-center
           items-center
-          flex-row
-          md:flex-col
-          space-y-0
-          md:space-y-3
-          space-x-3
-          md:space-x-0
+          flex-wrap
+          sm:flex-nowrap
+          space-y-4
+          sm:space-y-0
+          p-1
         "
       >
-        <me size="sm" :img-path="images.email" :href="links.email"></me>
-        <me size="sm" :img-path="images.linkedin" :href="links.linkedin"></me>
-        <me size="sm" :img-path="images.github" :href="links.github"></me>
+        <LinePath :dashed="true" circles="right" />
+        <Uni :img-path="images.upcLogo" :info="unis.upc" />
+        <LinePath />
+        <Uni :img-path="images.purdueLogo" :info="unis.purdue" />
+        <LinePath />
+        <Uni :img-path="images.upcLogo" :info="unis.upc_master" />
+        <LinePath />
+        <Uni :img-path="images.kingsLogo" :info="unis.kings" />
+        <LinePath :dashed="true" circles="left" />
       </div>
-    </div>
+    </section>
 
-    <Title class="mt-12">These are some of my personal projects:</Title>
-    <div class="text-sm mt-2 text-center px-4 text-gray-600">
-      (Click projects to get more info)
-    </div>
-    <div class="flex justify-center w-full mt-6 flex-wrap">
-      <project
-        v-for="proj in projects"
-        :key="proj.title"
-        :title="proj.title"
-        :subtitle="proj.subtitle"
-        :link="proj.link"
-        :type="proj.type"
-      />
-    </div>
+    <section id="this-is-my-path" class="py-6">
+      <Title class="">These are some of my personal projects:</Title>
+      <h2 class="text-sm mt-2 text-center px-4 text-gray-600">
+        (Click projects to get more info)
+      </h2>
+      <div class="flex justify-center w-full mt-6 flex-wrap">
+        <project
+          v-for="proj in projects"
+          :key="proj.title"
+          :title="proj.title"
+          :subtitle="proj.subtitle"
+          :link="proj.link"
+          :type="proj.type"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -56,6 +88,10 @@ import meImg from "~/assets/img/jo_low_res.jpg";
 import linkedinImg from "~/assets/img/linkedin_logo_sq.png";
 import emailLogo from "~/assets/img/email_icon.png";
 import githubLogo from "~/assets/img/github_logo.png";
+import upcLogo from "~/assets/img/upc_logo.png";
+import purdueLogo from "~/assets/img/purdue_logo.png";
+import kingsLogo from "~/assets/img/kings_logo.jpeg";
+
 export default {
   data: function () {
     return {
@@ -64,6 +100,35 @@ export default {
         linkedin: linkedinImg,
         email: emailLogo,
         github: githubLogo,
+        upcLogo: upcLogo,
+        purdueLogo: purdueLogo,
+        kingsLogo: kingsLogo,
+      },
+      unis: {
+        upc: {
+          name: "Polytechnic University of Catalonia",
+          degree: "Telecommunications Engineering",
+          country: "Barcelona",
+          year: 2014,
+        },
+        purdue: {
+          name: "Purdue University",
+          degree: "Final degree project",
+          country: "United States",
+          year: 2018,
+        },
+        upc_master: {
+          name: "Polytechnic University of Catalonia",
+          degree: "MSE Artificial Intelligence",
+          country: "Barcelona",
+          year: 2019,
+        },
+        kings: {
+          name: "King's College London",
+          degree: "Exchange Research Student",
+          country: "London",
+          year: 2020,
+        },
       },
       links: {
         linkedin: "https://www.linkedin.com/in/gferrate/",
