@@ -1,7 +1,7 @@
 <template>
   <div
     class="
-      w-40
+      w-48
       bg-gray-100
       rounded-xl
       p-2
@@ -27,13 +27,13 @@
         class="w-8 h-8 bg-no-repeat bg-center bg-contain flex-none rounded-full"
         :style="{ backgroundImage: `url(${imgPath})` }"
       ></div>
-      <div class="text-tiny text-gray-500 text-left uppercase">
+      <div class="text-xs text-gray-500 text-left uppercase">
         {{ info.name }}
       </div>
     </div>
 
-    <div class="text-xs mt-1 text-left z-20">{{ info.degree }}</div>
-    <div class="text-xs text-blue-500 mt-1 z-20">
+    <div class="text-sm mt-1 text-left z-20">{{ info.degree }}</div>
+    <div class="text-sm text-blue-500 mt-1 z-20">
       {{ info.country }}, {{ info.year }}
     </div>
   </div>

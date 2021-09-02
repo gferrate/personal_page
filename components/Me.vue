@@ -29,7 +29,7 @@ export default {
       let classes = [];
 
       // Add size classes
-      if (this.size === "sm") classes.push(...["h-14", "w-14"]);
+      if (this.size === "sm") classes.push(...["h-10", "w-10"]);
       else if (this.size === "md") classes.push(...["h-40", "w-40"]);
       else if (this.size === "lg") classes.push(...["h-56", "w-56"]);
 

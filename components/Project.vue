@@ -2,7 +2,7 @@
   <div
     class="
       w-64
-      h-52
+      h-44
       bg-gray-100
       rounded-xl
       p-2
@@ -24,10 +24,10 @@
     @click="open()"
   >
     <BackgroundFigure v-for="n in 4" :key="n" :color="color" />
-    <div class="z-10 relative text-xl text-left font-bold">
+    <div class="z-10 relative text-base text-left font-bold">
       {{ title | capitalize }}
     </div>
-    <div class="z-10 relative text-sm text-left text-gray-900 mt-2">
+    <div class="z-10 relative text-sm text-left text-gray-900 mt-1">
       {{ subtitle }}
     </div>
   </div>
