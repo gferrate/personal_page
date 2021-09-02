@@ -1,6 +1,8 @@
 <template>
-  <div class="container mx-auto max-w-7xl">
-    <Nuxt />
+  <div class="bg-gray-50">
+    <div class="container mx-auto max-w-7xl">
+      <Nuxt />
+    </div>
   </div>
 </template>
 

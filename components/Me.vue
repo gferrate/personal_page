@@ -5,9 +5,10 @@
     class="
       rounded-full
       bg-center bg-cover bg-no-repeat
-      shadow-lg
-      hover:shadow-2xl
+      shadow-md
+      hover:shadow-lg
       hover:rotate-6
+      hover:scale-110
       transform
       duration-500
     "

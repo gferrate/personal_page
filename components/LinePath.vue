@@ -18,6 +18,8 @@
       :cy="dimensions.height / 2"
       :r="strokeWidth"
       stroke-width="1"
+      :fill="color"
+      :stroke="color"
     />
     <circle
       v-if="circles == 'all' || circles == 'right'"

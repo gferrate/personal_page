@@ -1,21 +1,29 @@
 <template>
   <div
-    class="w-64 h-52 bg-gray-200 rounded-xl p-2 shadow-xl cursor-pointer hover:shadow-2xl hover:scale-105 transition duration-500 ease-in-out transform relative hover:rotate-6 overflow-hidden group m-3 select-none"
+    class="
+      w-64
+      h-52
+      bg-gray-50
+      rounded-xl
+      p-2
+      shadow-md
+      cursor-pointer
+      hover:shadow-lg
+      hover:scale-105
+      transition
+      duration-500
+      ease-in-out
+      transform
+      relative
+      hover:rotate-6
+      overflow-hidden
+      group
+      m-3
+      select-none
+    "
     @click="open()"
   >
-    <div
-      class="transform transition duration-500 ease-in-out absolute"
-      :class="getClasses1()"
-    ></div>
-    <div
-      class="transform transition duration-500 ease-in-out absolute"
-      :class="getClasses2()"
-    ></div>
-    <div
-      class="transform transition duration-500 ease-in-out absolute"
-      :class="getClasses3()"
-    ></div>
-
+    <BackgroundFigure v-for="n in 4" :key="n" :color="color" />
     <div class="z-10 relative text-xl text-left font-bold">
       {{ title | capitalize }}
     </div>
@@ -30,7 +38,7 @@ export default {
   data: function () {
     return {};
   },
-  props: ["title", "subtitle", "link", "type"],
+  props: ["title", "subtitle", "link", "color"],
   methods: {
     isMobile() {
       if (process.browser) {
@@ -45,295 +53,6 @@ export default {
         }, 500);
       } else {
         window.open(link, "_blank").focus();
-      }
-    },
-    getClasses1() {
-      switch (this.type) {
-        case "1":
-          return [
-            "left-0",
-            "bg-green-500",
-            "w-20",
-            "h-20",
-            "rotate-45",
-            "group-rotate:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "2":
-          return [
-            "left-0",
-            "bg-red-400",
-            "w-12",
-            "h-64",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "3":
-          return [
-            "left-0",
-            "bg-blue-400",
-            "w-64",
-            "h-16",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "4":
-          return [
-            "right-0",
-            "bg-yellow-500",
-            "w-32",
-            "h-16",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "5":
-          return [
-            "right-0",
-            "bg-purple-500",
-            "w-32",
-            "h-16",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "5":
-          return [
-            "left-0",
-            "bg-gray-500",
-            "w-6",
-            "h-32",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "6":
-          return [
-            "right-0",
-            "bg-gray-500",
-            "w-32",
-            "h-32",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "7":
-          return [
-            "bottom-0",
-            "bg-indigo-500",
-            "w-16",
-            "h-16",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "8":
-          return [
-            "right-0",
-            "bg-pink-500",
-            "w-64",
-            "h-32",
-            "-rotate-12",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-      }
-    },
-    getClasses2() {
-      switch (this.type) {
-        case "1":
-          return [
-            "right-0",
-            "bg-green-600",
-            "w-28",
-            "h-40",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "2":
-          return [
-            "right-0",
-            "bg-red-500",
-            "w-28",
-            "h-40",
-            "rotate-45",
-            "group-hover:rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "3":
-          return [
-            "right-0",
-            "bottom-0",
-            "bg-blue-500",
-            "w-32",
-            "h-32",
-            "rotate-6",
-            "group-hover:-rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "4":
-          return [
-            "right-0",
-            "bottom-0",
-            "bg-yellow-500",
-            "w-52",
-            "h-12",
-            "rotate-6",
-            "group-hover:-rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "5":
-          return [
-            "right-0",
-            "bottom-0",
-            "bg-purple-500",
-            "w-52",
-            "h-32",
-            "-rotate-6",
-            "group-hover:-rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "6":
-          return [
-            "right-0",
-            "bottom-0",
-            "bg-gray-500",
-            "w-12",
-            "h-52",
-            "rotate-6",
-            "group-hover:-rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "7":
-          return [
-            "right-0",
-            "bottom-0",
-            "bg-indigo-500",
-            "w-52",
-            "h-52",
-            "rotate-6",
-            "group-hover:-rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-        case "8":
-          return [
-            "top-0",
-            "left-0",
-            "bg-pink-500",
-            "w-12",
-            "h-52",
-            "rotate-12",
-            "group-hover:-rotate-12",
-            "group-hover:scale-125",
-            "opacity-50",
-          ];
-      }
-    },
-    getClasses3() {
-      switch (this.type) {
-        case "1":
-          return [
-            "bottom-0",
-            "bg-green-400",
-            "w-24",
-            "h-24",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
-        case "2":
-          return [
-            "bottom-0",
-            "right-0",
-            "bg-red-600",
-            "w-12",
-            "h-12",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
-        case "3":
-          return [
-            "bottom-0",
-            "left-1",
-            "bg-blue-600",
-            "w-20",
-            "h-20",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
-        case "4":
-          return [
-            "top-0",
-            "left-1",
-            "bg-yellow-600",
-            "w-20",
-            "h-20",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
-        case "5":
-          return [
-            "bottom-0",
-            "bg-purple-600",
-            "w-32",
-            "h-32",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
-        case "6":
-          return [
-            "top-0",
-            "left-1",
-            "bg-gray-600",
-            "w-40",
-            "h-40",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
-        case "7":
-          return [
-            "right-0",
-            "bg-indigo-600",
-            "w-32",
-            "h-32",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
-        case "8":
-          return [
-            "right-0",
-            "bottom-1",
-            "bg-pink-600",
-            "w-40",
-            "h-40",
-            "rounded-full",
-            "group-hover:scale-150",
-            "opacity-50",
-          ];
       }
     },
   },

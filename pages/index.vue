@@ -37,7 +37,7 @@
     </section>
 
     <section id="this-is-my-path" class="py-6 relative">
-      <Title class="">This is my path:</Title>
+      <Title class="">This is my academic path:</Title>
       <div
         class="
           mt-6
@@ -81,6 +81,8 @@
         <LinePath :dashed="true" circles="right" />
         <Uni :img-path="images.caixaLogo" :info="works.caixa" />
         <LinePath />
+        <Uni :img-path="images.personalProjectsLogo" :info="works.personal" />
+        <LinePath />
         <Uni :img-path="images.bmatLogo" :info="works.bmat" />
         <LinePath :dashed="true" circles="left" />
       </div>
@@ -94,11 +96,11 @@
       <div class="flex justify-center w-full mt-6 flex-wrap">
         <project
           v-for="proj in projects"
+          :color="proj.color"
           :key="proj.title"
           :title="proj.title"
           :subtitle="proj.subtitle"
           :link="proj.link"
-          :type="proj.type"
         />
       </div>
     </section>
@@ -115,6 +117,7 @@ import purdueLogo from "~/assets/img/purdue_logo.png";
 import kingsLogo from "~/assets/img/kings_logo.jpeg";
 import caixaLogo from "~/assets/img/caixabank_logo.png";
 import bmatLogo from "~/assets/img/bmat_logo.jpeg";
+import personalProjectsLogo from "~/assets/img/personal_projects_logo.png";
 
 export default {
   data: function () {
@@ -129,6 +132,7 @@ export default {
         kingsLogo: kingsLogo,
         caixaLogo: caixaLogo,
         bmatLogo: bmatLogo,
+        personalProjectsLogo: personalProjectsLogo,
       },
       works: {
         caixa: {
@@ -136,12 +140,21 @@ export default {
           degree: "Business Intelligence Intern",
           country: "Barcelona",
           year: 2017,
+          color: "bg-red-500"
+        },
+        personal: {
+          name: "Personal Projects",
+          degree: "All kinds of things",
+          country: "The Globe",
+          year: 2015,
+          color: "bg-blue-500"
         },
         bmat: {
           name: "BMAT Music Innovators",
           degree: "Software Engineer",
           country: "Barcelona",
           year: 2017,
+          color: "bg-green-500"
         },
       },
       unis: {
@@ -150,24 +163,28 @@ export default {
           degree: "Telecommunications Engineering",
           country: "Barcelona",
           year: 2014,
+          color: "bg-gray-500"
         },
         purdue: {
           name: "Purdue University",
           degree: "Final degree project",
           country: "United States",
           year: 2018,
+          color: "bg-purple-500"
         },
         upc_master: {
           name: "Polytechnic University of Catalonia",
           degree: "MSE Artificial Intelligence",
           country: "Barcelona",
           year: 2019,
+          color: "bg-yellow-500"
         },
         kings: {
           name: "King's College London",
           degree: "Exchange Research Student",
           country: "London",
           year: 2020,
+          color: "bg-indigo-500"
         },
       },
       links: {
@@ -179,58 +196,65 @@ export default {
         {
           title: "Royalties Calculator",
           subtitle:
-            "This tool enables you to search for any musician and it approximates how much money generates on royalties on all the major streaming platforms.",
-          type: "1",
+            "This tool enables you to search for any musician and it approximates how much money generates on royalties on all the major streaming platforms. It has hundreds of thousands of page visits.",
           link: "https://royalties-calculator.com/",
+          color: "bg-indigo-500"
         },
         {
           title: "Analog Synthesiser and 8-Step sequencer",
           subtitle:
             "Designed a full size analog synthesizer and a 8-step sequencer as my final thesis at Purdue University.",
-          type: "2",
           link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
+          color: "bg-gray-500"
         },
         {
           title: "Federated Learning Framework",
           subtitle:
             "Designed, implemented, and tested an algorithm for training a Convolutional Neural Network in a distributed manner (Federated Learning).",
           link: "https://github.com/gferrate/pytorch_federated_learning",
-          type: "3",
+          color: "bg-yellow-500"
+        },
+        {
+          title: "Bestwatch",
+          subtitle:
+            "Ranks all Netflix catalog from nearly all countries by IMDB rating. It amasses thousands of page visits.",
+          link: "https://bestwatch.app/",
+          color: "bg-pink-500"
         },
         {
           title: "Drunk Translator",
           subtitle:
             "A prank webpage which simulates drunk behaviour. It accumulates tens of thousands of visits.",
           link: "https://www.drunk-translator.com/?lang=eng",
-          type: "4",
+          color: "bg-blue-500"
         },
         {
           title: "View Instagram Likes",
           subtitle:
             "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes of a given post.",
           link: "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
-          type: "5",
+          color: "bg-pink-500"
         },
         {
           title: "Hodor",
           subtitle:
             "I engineered a system to open and close BMAT’s headquarter’s office with auth0 autentication and access control (taking into account geolocation).",
           link: "https://www.youtube.com/watch?v=_1j-8boMRDQ",
-          type: "6",
+          color: "bg-purple-500"
         },
         {
           title: "My Friend Is on Tinder",
           subtitle:
             "A prank webpage for creating fake tinder profiles (for jokes).",
           link: "https://my-friend-is-on-a-dating-app.com/",
-          type: "7",
+          color: "bg-indigo-500"
         },
         {
           title: "The Bus Game",
           subtitle:
             "A classic Spanish cards game made online during the quarintine! The repo is open (click).",
           link: "https://github.com/gferrate/juego_del_bus",
-          type: "8",
+          color: "bg-green-500"
         },
       ],
     };
