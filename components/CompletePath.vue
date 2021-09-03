@@ -34,7 +34,7 @@
 export default {
   props: {
     infos: {
-      type: Object,
+      type: Array,
       required: true,
     },
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full pb-16">
+  <div>
     <section id="this-is-me" class="py-6">
       <div class="flex flex-col md:flex-row justify-center items-center mt-5">
         <div
@@ -76,17 +76,48 @@
 
     <section id="this-is-my-path" class="py-5 relative">
       <Title class="">This is my academic path:</Title>
-      <CompletePath :infos="unis"  />
+      <CompletePath :infos="unis" />
     </section>
 
     <section id="this-is-my-work-experience" class="py-5 relative">
       <Title class="">These are my work experiences:</Title>
-      <CompletePath :infos="works"  />
+      <CompletePath :infos="works" />
     </section>
 
     <section id="these-are-my-academic-distinctions" class="py-5 relative">
       <Title class="">These are my academic awards:</Title>
-      <CompletePath :infos="awards"  />
+      <CompletePath :infos="awards" />
+    </section>
+
+    <section
+      id="like-what-you-see"
+      class="py-8 text-center text-gray-500 text-sm"
+    >
+      <div
+        class="
+          mx-auto
+          border-t
+          pt-8
+          flex
+          justify-between
+          items-center
+          flex-col
+          md:flex-row
+          space-y-4
+          md:space-y-0
+        "
+      >
+        <p>
+          Like what you see?
+          <a
+            class="underline"
+            href="https://github.com/gferrate/personal_page"
+            target="_blank"
+            >Fork it on Github</a
+          >
+        </p>
+        <p>Gabriel Ferraté, {{ currentYear }}</p>
+      </div>
     </section>
   </div>
 </template>
@@ -107,6 +138,7 @@ import texasInstrumentsLogo from "~/assets/img/texas_instruments.jpg";
 export default {
   data: function () {
     return {
+      currentYear: new Date().getFullYear(),
       images: {
         me: meImg,
         linkedin: linkedinImg,
@@ -130,7 +162,7 @@ export default {
         paragraphs: [
           "I am Gabriel Ferraté, a Barcelona-born, globally-based engineer and music nerd.",
           "I love to create things, either hardware or software, robots or websites, useless or useful. You name it.",
-          "Most of my experience is on backend technolgies and databases but I also like to tinker with artificial intelligence, frontend and other cool stuff.",
+          "Most of my experience is on backend technologies and databases, but I also like to tinker with artificial intelligence, electronics, frontend development, and other cool stuff.",
           "Scroll down to discover me. See you soon!",
         ],
       },
@@ -142,7 +174,7 @@ export default {
           year: 2018,
           color: "bg-yellow-500",
           href: "https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards",
-          image: purdueLogo
+          image: purdueLogo,
         },
         {
           name: "Texas Instruments Senior Design Contest",
@@ -151,7 +183,7 @@ export default {
           year: 2018,
           color: "bg-red-500",
           href: "https://www.facebook.com/texasinstruments/videos/395457504534454/",
-          image: texasInstrumentsLogo
+          image: texasInstrumentsLogo,
         },
       ],
       works: [
@@ -162,7 +194,7 @@ export default {
           year: 2017,
           color: "bg-blue-500",
           href: "https://www.caixabank.es/",
-          image: caixaLogo
+          image: caixaLogo,
         },
         {
           name: "Personal Projects",
@@ -171,7 +203,7 @@ export default {
           year: 2015,
           color: "bg-gray-500",
           href: "https://github.com/gferrate",
-          image: personalProjectsLogo
+          image: personalProjectsLogo,
         },
         {
           name: "BMAT Music Innovators",
@@ -180,7 +212,7 @@ export default {
           year: 2017,
           color: "bg-green-500",
           href: "https://www.bmat.com/",
-          image: bmatLogo
+          image: bmatLogo,
         },
       ],
       unis: [
@@ -191,7 +223,7 @@ export default {
           year: 2014,
           color: "bg-blue-500",
           href: "https://telecos.upc.edu/en?set_language=en",
-          image: upcLogo
+          image: upcLogo,
         },
         {
           name: "Purdue University",
@@ -200,7 +232,7 @@ export default {
           year: 2018,
           color: "bg-yellow-500",
           href: "https://engineering.purdue.edu/ECE",
-          image: purdueLogo
+          image: purdueLogo,
         },
         {
           name: "Polytechnic University of Catalonia",
@@ -209,7 +241,7 @@ export default {
           year: 2019,
           color: "bg-blue-500",
           href: "https://matt.masters.upc.edu/",
-          image: upcLogo
+          image: upcLogo,
         },
         {
           name: "King's College London",
@@ -218,7 +250,7 @@ export default {
           year: 2020,
           color: "bg-red-500",
           href: "https://www.kcl.ac.uk/research/ctr",
-          image: kingsLogo
+          image: kingsLogo,
         },
       ],
       projects: [

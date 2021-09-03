@@ -1,6 +1,8 @@
-# personal_page
+# A cool personal webpage!
 
-## Build Setup
+## Visit the deployed version [here](https://www.gabrielferrate.com/)
+
+## How to run
 
 ```bash
 # install dependencies
