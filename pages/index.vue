@@ -1,7 +1,6 @@
 <template>
   <div class="h-full pb-16">
     <section id="this-is-me" class="py-6">
-      <Title class="">This is me:</Title>
       <div class="flex flex-col md:flex-row justify-center items-center mt-5">
         <div
           class="
