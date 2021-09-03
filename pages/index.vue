@@ -185,11 +185,8 @@ export default {
         title: "Hi there! Welcome to my site,",
         paragraphs: [
           "I am Gabriel Ferraté, a Barcelona-born, globally-based engineer and music nerd.",
-
           "I love to create things, either hardware or software, robots or websites, useless or useful. You name it.",
-
-          "Most of my experience is on backend technolgies and databases but I also like to tinker with frontend, automation and other cool stuff.",
-
+          "Most of my experience is on backend technolgies and databases but I also like to tinker with artificial intelligence, frontend and other cool stuff.",
           "Scroll down to discover me. See you soon!",
         ],
       },
@@ -200,6 +197,7 @@ export default {
           country: "United States",
           year: 2018,
           color: "bg-yellow-500",
+          href: 'https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards'
         },
         texas: {
           name: "Texas Instruments Senior Design Contest",
@@ -207,6 +205,7 @@ export default {
           country: "United States",
           year: 2018,
           color: "bg-red-500",
+          href: 'https://www.facebook.com/texasinstruments/videos/395457504534454/'
         },
       },
       works: {
@@ -216,6 +215,7 @@ export default {
           country: "Barcelona",
           year: 2017,
           color: "bg-blue-500",
+          href: 'https://www.caixabank.es/'
         },
         personal: {
           name: "Personal Projects",
@@ -223,6 +223,7 @@ export default {
           country: "The Globe",
           year: 2015,
           color: "bg-gray-500",
+          href: 'https://github.com/gferrate'
         },
         bmat: {
           name: "BMAT Music Innovators",
@@ -230,6 +231,7 @@ export default {
           country: "Barcelona",
           year: 2017,
           color: "bg-green-500",
+          href: 'https://www.bmat.com/'
         },
       },
       unis: {
@@ -239,6 +241,7 @@ export default {
           country: "Barcelona",
           year: 2014,
           color: "bg-blue-500",
+          href: 'https://telecos.upc.edu/en?set_language=en'
         },
         purdue: {
           name: "Purdue University",
@@ -246,6 +249,7 @@ export default {
           country: "United States",
           year: 2018,
           color: "bg-yellow-500",
+          href: 'https://engineering.purdue.edu/ECE'
         },
         upc_master: {
           name: "Polytechnic University of Catalonia",
@@ -253,6 +257,7 @@ export default {
           country: "Barcelona",
           year: 2019,
           color: "bg-blue-500",
+          href: 'https://matt.masters.upc.edu/'
         },
         kings: {
           name: "King's College London",
@@ -260,6 +265,7 @@ export default {
           country: "London",
           year: 2020,
           color: "bg-red-500",
+          href: 'https://www.kcl.ac.uk/research/ctr'
         },
       },
       links: {

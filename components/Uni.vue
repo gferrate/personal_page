@@ -1,5 +1,7 @@
 <template>
-  <div
+  <a
+    :href="info.href"
+    target="_blank"
     class="
       w-48
       bg-gray-100
@@ -19,6 +21,7 @@
       transform
       group
       z-20
+      select-none
     "
   >
     <BackgroundFigure v-for="n in 3" :key="n" :color="info.color" />
@@ -36,7 +39,7 @@
     <div class="text-sm text-blue-500 mt-1 z-20">
       {{ info.country }}, {{ info.year }}
     </div>
-  </div>
+  </a>
 </template>
 <script>
 export default {
