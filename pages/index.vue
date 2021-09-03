@@ -2,36 +2,58 @@
   <div class="h-full pb-16">
     <section id="this-is-me" class="py-6">
       <Title class="">This is me:</Title>
-      <div
-        class="
-          flex flex-col
-          md:flex-row
-          justify-center
-          items-center
-          space-y-4
-          md:space-y-0
-          space-x-0
-          md:space-x-4
-          mt-6
-        "
-      >
-        <me size="lg" :img-path="images.me"></me>
+      <div class="flex flex-col md:flex-row justify-center items-center mt-5">
         <div
           class="
-            flex
+            flex flex-col-reverse
+            md:flex-row
             justify-center
             items-center
-            flex-row
-            md:flex-col
-            space-y-0
-            md:space-y-2
-            space-x-2
-            md:space-x-0
+            space-y-4
+            md:space-y-0
+            space-x-0
+            md:space-x-4
           "
         >
-          <me size="sm" :img-path="images.email" :href="links.email"></me>
-          <me size="sm" :img-path="images.linkedin" :href="links.linkedin"></me>
-          <me size="sm" :img-path="images.github" :href="links.github"></me>
+          <div
+            class="
+              mt-4
+              md:mt-0
+              flex
+              justify-center
+              items-center
+              flex-row
+              md:flex-col
+              space-y-0
+              md:space-y-2
+              space-x-2
+              md:space-x-0
+            "
+          >
+            <me size="sm" :img-path="images.email" :href="links.email"></me>
+            <me
+              size="sm"
+              :img-path="images.linkedin"
+              :href="links.linkedin"
+            ></me>
+            <me size="sm" :img-path="images.github" :href="links.github"></me>
+          </div>
+          <me size="lg" :img-path="images.me"></me>
+        </div>
+        <div
+          class="
+            max-w-md
+            px-4
+            mt-6
+            md:mt-0
+            md:p-0
+            ml-0
+            md:ml-5
+            text-sm text-justify
+            md:text-left
+          "
+        >
+          <Bio :bio="bio" />
         </div>
       </div>
     </section>
@@ -159,6 +181,18 @@ export default {
         bmatLogo: bmatLogo,
         personalProjectsLogo: personalProjectsLogo,
         texasInstrumentsLogo: texasInstrumentsLogo,
+      },
+      bio: {
+        title: "Hi there! Welcome to my site,",
+        paragraphs: [
+          "I am Gabriel Ferraté, a Barcelona-born, globally-based engineer and music nerd.",
+
+          "I love to create things, either hardware or software, robots or websites, useless or useful. You name it.",
+
+          "Most of my experience is on backend technolgies and databases but I also like to tinker with frontend, automation and other cool stuff.",
+
+          "Scroll down to discover me. See you soon!",
+        ],
       },
       awards: {
         eaton: {

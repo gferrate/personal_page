@@ -8,10 +8,11 @@
       shadow-md
       hover:shadow-lg
       hover:rotate-6
-      hover:scale-110
+      hover:scale-105
       transform
       duration-500
       z-20
+      flex-none
     "
     :class="getDynamicClasses()"
     :style="{ backgroundImage: `url(${imgPath})` }"
