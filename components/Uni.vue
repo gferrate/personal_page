@@ -28,7 +28,7 @@
     <div class="flex justify-center items-center space-x-2 z-20">
       <div
         class="w-8 h-8 bg-no-repeat bg-center bg-contain flex-none rounded-full"
-        :style="{ backgroundImage: `url(${imgPath})` }"
+        :style="{ backgroundImage: `url(${info.image})` }"
       ></div>
       <div class="text-xs text-gray-500 text-left uppercase">
         {{ info.name }}
@@ -47,10 +47,6 @@ export default {
     return {};
   },
   props: {
-    imgPath: {
-      type: String,
-      default: "",
-    },
     info: {
       type: Object,
       default: function () {

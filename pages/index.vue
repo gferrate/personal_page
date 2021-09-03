@@ -74,80 +74,19 @@
       </div>
     </section>
 
-    <section id="this-is-my-path" class="py-6 relative">
+    <section id="this-is-my-path" class="py-5 relative">
       <Title class="">This is my academic path:</Title>
-      <div
-        class="
-          mt-6
-          flex flex-col
-          sm:flex-row
-          justify-center
-          items-center
-          space-y-4
-          sm:space-y-0
-          p-1
-        "
-      >
-        <LinePath :dashed="true" circles="right" />
-        <Uni :img-path="images.upcLogo" :info="unis.upc" />
-        <LinePath />
-        <Uni :img-path="images.purdueLogo" :info="unis.purdue" />
-        <LinePath />
-        <Uni :img-path="images.upcLogo" :info="unis.upc_master" />
-        <LinePath />
-        <Uni :img-path="images.kingsLogo" :info="unis.kings" />
-        <LinePath :dashed="true" circles="left" />
-      </div>
+      <CompletePath :infos="unis"  />
     </section>
 
-    <section id="this-is-my-work-experience" class="py-6 relative">
+    <section id="this-is-my-work-experience" class="py-5 relative">
       <Title class="">These are my work experiences:</Title>
-      <div
-        class="
-          mt-6
-          flex flex-col
-          sm:flex-row
-          justify-center
-          items-center
-          flex-wrap
-          sm:flex-nowrap
-          space-y-4
-          sm:space-y-0
-          p-1
-        "
-      >
-        <LinePath :dashed="true" circles="right" />
-        <Uni :img-path="images.caixaLogo" :info="works.caixa" />
-        <LinePath />
-        <Uni :img-path="images.personalProjectsLogo" :info="works.personal" />
-        <LinePath />
-        <Uni :img-path="images.bmatLogo" :info="works.bmat" />
-        <LinePath :dashed="true" circles="left" />
-      </div>
+      <CompletePath :infos="works"  />
     </section>
 
-    <section id="these-are-my-academic-distinctions" class="py-6 relative">
+    <section id="these-are-my-academic-distinctions" class="py-5 relative">
       <Title class="">These are my academic awards:</Title>
-      <div
-        class="
-          mt-6
-          flex flex-col
-          sm:flex-row
-          justify-center
-          items-center
-          flex-wrap
-          sm:flex-nowrap
-          space-y-4
-          sm:space-y-0
-          p-1
-        "
-      >
-        <LinePath :dashed="true" circles="right" />
-        <Uni :img-path="images.purdueLogo" :info="awards.eaton" />
-        <LinePath />
-        <Uni :img-path="images.texasInstrumentsLogo" :info="awards.texas" />
-        <LinePath :dashed="true" circles="left" />
-      </div>
+      <CompletePath :infos="awards"  />
     </section>
   </div>
 </template>
@@ -181,6 +120,11 @@ export default {
         personalProjectsLogo: personalProjectsLogo,
         texasInstrumentsLogo: texasInstrumentsLogo,
       },
+      links: {
+        linkedin: "https://www.linkedin.com/in/gferrate/",
+        email: "mailto:g.ferrate.c@gmail.com",
+        github: "https://github.com/gferrate",
+      },
       bio: {
         title: "Hi there! Welcome to my site,",
         paragraphs: [
@@ -190,89 +134,93 @@ export default {
           "Scroll down to discover me. See you soon!",
         ],
       },
-      awards: {
-        eaton: {
+      awards: [
+        {
           name: "Eaton Design Award",
           degree: "Best final project of the promotion at Purdue",
           country: "United States",
           year: 2018,
           color: "bg-yellow-500",
-          href: 'https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards'
+          href: "https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards",
+          image: purdueLogo
         },
-        texas: {
+        {
           name: "Texas Instruments Senior Design Contest",
           degree: "Best senior design project according to TI",
           country: "United States",
           year: 2018,
           color: "bg-red-500",
-          href: 'https://www.facebook.com/texasinstruments/videos/395457504534454/'
+          href: "https://www.facebook.com/texasinstruments/videos/395457504534454/",
+          image: texasInstrumentsLogo
         },
-      },
-      works: {
-        caixa: {
+      ],
+      works: [
+        {
           name: "Caixabank Consumer Finance",
           degree: "Business Intelligence Intern",
           country: "Barcelona",
           year: 2017,
           color: "bg-blue-500",
-          href: 'https://www.caixabank.es/'
+          href: "https://www.caixabank.es/",
+          image: caixaLogo
         },
-        personal: {
+        {
           name: "Personal Projects",
           degree: "All kinds of things",
           country: "The Globe",
           year: 2015,
           color: "bg-gray-500",
-          href: 'https://github.com/gferrate'
+          href: "https://github.com/gferrate",
+          image: personalProjectsLogo
         },
-        bmat: {
+        {
           name: "BMAT Music Innovators",
           degree: "Software Engineer",
           country: "Barcelona",
           year: 2017,
           color: "bg-green-500",
-          href: 'https://www.bmat.com/'
+          href: "https://www.bmat.com/",
+          image: bmatLogo
         },
-      },
-      unis: {
-        upc: {
+      ],
+      unis: [
+        {
           name: "Polytechnic University of Catalonia",
           degree: "Telecommunications Engineering",
           country: "Barcelona",
           year: 2014,
           color: "bg-blue-500",
-          href: 'https://telecos.upc.edu/en?set_language=en'
+          href: "https://telecos.upc.edu/en?set_language=en",
+          image: upcLogo
         },
-        purdue: {
+        {
           name: "Purdue University",
           degree: "Final degree project",
           country: "United States",
           year: 2018,
           color: "bg-yellow-500",
-          href: 'https://engineering.purdue.edu/ECE'
+          href: "https://engineering.purdue.edu/ECE",
+          image: purdueLogo
         },
-        upc_master: {
+        {
           name: "Polytechnic University of Catalonia",
           degree: "MSE Artificial Intelligence",
           country: "Barcelona",
           year: 2019,
           color: "bg-blue-500",
-          href: 'https://matt.masters.upc.edu/'
+          href: "https://matt.masters.upc.edu/",
+          image: upcLogo
         },
-        kings: {
+        {
           name: "King's College London",
           degree: "Exchange Research Student",
           country: "London",
           year: 2020,
           color: "bg-red-500",
-          href: 'https://www.kcl.ac.uk/research/ctr'
+          href: "https://www.kcl.ac.uk/research/ctr",
+          image: kingsLogo
         },
-      },
-      links: {
-        linkedin: "https://www.linkedin.com/in/gferrate/",
-        email: "mailto:g.ferrate.c@gmail.com",
-        github: "https://github.com/gferrate",
-      },
+      ],
       projects: [
         {
           title: "Royalties Calculator",
