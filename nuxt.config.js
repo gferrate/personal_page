@@ -41,7 +41,7 @@ export default {
   },
 
   googleAnalytics: {
-    id: 'G-Q4GFBE34GE'
+    id: 'UA-157509775-5'
   },
 
   modules: [],
