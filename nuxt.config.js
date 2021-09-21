@@ -27,21 +27,18 @@ export default {
 
   css: ["@/assets/css/style.css"],
 
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/vue-gtag' }
+  ],
 
   components: true,
 
   buildModules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-analytics'
   ],
 
   tailwindcss: {
     jit: true
-  },
-
-  googleAnalytics: {
-    id: 'UA-157509775-5'
   },
 
   modules: [],
