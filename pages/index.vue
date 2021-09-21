@@ -292,28 +292,27 @@ export default {
         {
           title: "View Instagram Likes",
           subtitle:
-            "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes of a given post.",
+            "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes for a given post.",
           link: "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
           color: "bg-pink-500",
         },
         {
           title: "Hodor",
           subtitle:
-            "I engineered a system to open and close BMAT’s headquarter’s office with auth0 autentication and access control (taking into account geolocation).",
+            "I engineered a system to open and close BMAT’s headquarter’s office with auth0 authentication and access control, taking geolocalisation into account.",
           link: "https://www.youtube.com/watch?v=_1j-8boMRDQ",
           color: "bg-purple-500",
         },
         {
           title: "My Friend Is on Tinder",
-          subtitle:
-            "A prank webpage for creating fake tinder profiles (for jokes).",
+          subtitle: "Prank website to create fake Tinder profiles.",
           link: "https://my-friend-is-on-a-dating-app.com/",
           color: "bg-indigo-500",
         },
         {
           title: "The Bus Game",
           subtitle:
-            "A classic Spanish cards game made online during the quarintine! The repo is open (click).",
+            "A classic Spanish cards game made online during the quarantine! The repo is open (click).",
           link: "https://github.com/gferrate/juego_del_bus",
           color: "bg-green-500",
         },
