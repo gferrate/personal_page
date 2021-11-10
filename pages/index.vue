@@ -316,6 +316,13 @@ export default {
           link: "https://github.com/gferrate/juego_del_bus",
           color: "bg-green-500",
         },
+        {
+          title: "Customize Windows Blue Error Screen",
+          subtitle:
+            "A prank website to customize the windows blue error screen.",
+          link: "https://windows-blue-screen.netlify.app/",
+          color: "bg-blue-500",
+        },
       ],
     };
   },
