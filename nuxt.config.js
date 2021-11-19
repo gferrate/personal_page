@@ -1,25 +1,30 @@
 export default {
-  target: 'static',
+  target: "static",
 
   server: {
-    host: '0'
+    host: "0"
   },
 
   head: {
-    title: 'Gabriel Ferraté',
+    title: "Gabriel Ferraté",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'A short description of myself.' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "A short description of myself."
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/gf_favicon_2.png' },
+      { rel: "icon", type: "image/png", href: "/gf_favicon_2.png" },
       { rel: "preconnect", href: "https://fonts.gstatic.com" },
       {
-        href: "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap",
+        href:
+          "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap",
         rel: "stylesheet"
       }
     ]
@@ -27,15 +32,11 @@ export default {
 
   css: ["@/assets/css/style.css"],
 
-  plugins: [
-    { src: '~/plugins/vue-gtag' }
-  ],
+  plugins: [{ src: "~/plugins/vue-gtag" }],
 
   components: true,
 
-  buildModules: [
-    '@nuxtjs/tailwindcss',
-  ],
+  buildModules: ["@nuxtjs/tailwindcss"],
 
   tailwindcss: {
     jit: true
@@ -44,4 +45,4 @@ export default {
   modules: [],
 
   build: {}
-}
+};
