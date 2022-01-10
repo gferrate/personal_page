@@ -306,7 +306,7 @@ export default {
         {
           title: "My Friend Is on Tinder",
           subtitle: "Prank website to create fake Tinder profiles.",
-          link: "https://my-friend-is-on-a-dating-app.com/",
+          link: "https://github.com/gferrate/my_friend_is_on_tinder",
           color: "bg-indigo-500",
         },
         {
