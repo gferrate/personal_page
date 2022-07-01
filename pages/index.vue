@@ -58,9 +58,9 @@
     </section>
 
     <section id="this-is-my-path" class="py-6">
-      <Title class="">These are some of my personal projects:</Title>
+      <Title class="">These are some of my projects:</Title>
       <h2 class="text-sm mt-2 text-center px-4 text-gray-600">
-        (Click projects to get more info)
+        (Click any project to get more info)
       </h2>
       <div class="flex justify-center w-full mt-6 flex-wrap">
         <project
@@ -267,6 +267,12 @@ export default {
             "Designed a full size analog synthesizer and a 8-step sequencer as my final thesis at Purdue University.",
           link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
           color: "bg-gray-500",
+        },
+        {
+          title: "dupla.ai",
+          subtitle: "A copywriting tool loaded with artificial intelligence.",
+          link: "https://www.dupla.ai/",
+          color: "bg-red-500",
         },
         {
           title: "Federated Learning Framework",
