@@ -136,7 +136,7 @@ import personalProjectsLogo from "~/assets/img/personal_projects_logo.png";
 import texasInstrumentsLogo from "~/assets/img/texas_instruments.jpg";
 
 export default {
-  data: function () {
+  data: function() {
     return {
       currentYear: new Date().getFullYear(),
       images: {
@@ -150,12 +150,12 @@ export default {
         caixaLogo: caixaLogo,
         bmatLogo: bmatLogo,
         personalProjectsLogo: personalProjectsLogo,
-        texasInstrumentsLogo: texasInstrumentsLogo,
+        texasInstrumentsLogo: texasInstrumentsLogo
       },
       links: {
         linkedin: "https://www.linkedin.com/in/gferrate/",
         email: "mailto:g.ferrate.c@gmail.com",
-        github: "https://github.com/gferrate",
+        github: "https://github.com/gferrate"
       },
       bio: {
         title: "Hi there! Welcome to my site,",
@@ -163,8 +163,8 @@ export default {
           "I am Gabriel Ferraté, a Barcelona-born, globally-based engineer and music nerd.",
           "I love to create things, either hardware or software, robots or websites, useless or useful. You name it.",
           "Most of my experience is on backend technologies and databases, but I also like to tinker with artificial intelligence, electronics, frontend development, and other cool stuff.",
-          "Scroll down to discover me. See you soon!",
-        ],
+          "Scroll down to discover me. See you soon!"
+        ]
       },
       awards: [
         {
@@ -173,8 +173,9 @@ export default {
           country: "United States",
           year: 2018,
           color: "bg-yellow-500",
-          href: "https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards",
-          image: purdueLogo,
+          href:
+            "https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards",
+          image: purdueLogo
         },
         {
           name: "Texas Instruments Senior Design Contest",
@@ -182,9 +183,10 @@ export default {
           country: "United States",
           year: 2018,
           color: "bg-red-500",
-          href: "https://www.facebook.com/texasinstruments/videos/395457504534454/",
-          image: texasInstrumentsLogo,
-        },
+          href:
+            "https://www.facebook.com/texasinstruments/videos/395457504534454/",
+          image: texasInstrumentsLogo
+        }
       ],
       works: [
         {
@@ -194,7 +196,7 @@ export default {
           year: 2017,
           color: "bg-blue-500",
           href: "https://www.caixabank.es/",
-          image: caixaLogo,
+          image: caixaLogo
         },
         {
           name: "Personal Projects",
@@ -203,7 +205,7 @@ export default {
           year: 2015,
           color: "bg-gray-500",
           href: "https://github.com/gferrate",
-          image: personalProjectsLogo,
+          image: personalProjectsLogo
         },
         {
           name: "BMAT Music Innovators",
@@ -212,8 +214,8 @@ export default {
           year: 2017,
           color: "bg-green-500",
           href: "https://www.bmat.com/",
-          image: bmatLogo,
-        },
+          image: bmatLogo
+        }
       ],
       unis: [
         {
@@ -223,7 +225,7 @@ export default {
           year: 2014,
           color: "bg-blue-500",
           href: "https://telecos.upc.edu/en?set_language=en",
-          image: upcLogo,
+          image: upcLogo
         },
         {
           name: "Purdue University",
@@ -232,7 +234,7 @@ export default {
           year: 2018,
           color: "bg-yellow-500",
           href: "https://engineering.purdue.edu/ECE",
-          image: purdueLogo,
+          image: purdueLogo
         },
         {
           name: "Polytechnic University of Catalonia",
@@ -241,7 +243,7 @@ export default {
           year: 2019,
           color: "bg-blue-500",
           href: "https://matt.masters.upc.edu/",
-          image: upcLogo,
+          image: upcLogo
         },
         {
           name: "King's College London",
@@ -250,8 +252,8 @@ export default {
           year: 2020,
           color: "bg-red-500",
           href: "https://www.kcl.ac.uk/research/ctr",
-          image: kingsLogo,
-        },
+          image: kingsLogo
+        }
       ],
       projects: [
         {
@@ -259,83 +261,87 @@ export default {
           subtitle:
             "This tool enables you to search for any musician and it approximates how much money generates on royalties on all the major streaming platforms. It has hundreds of thousands of page visits.",
           link: "https://royalties-calculator.com/",
-          color: "bg-indigo-500",
+          color: "bg-indigo-500"
         },
         {
           title: "Analog Synthesiser and 8-Step sequencer",
           subtitle:
             "Designed a full size analog synthesizer and a 8-step sequencer as my final thesis at Purdue University.",
           link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
-          color: "bg-gray-500",
+          color: "bg-gray-500"
         },
         {
           title: "dupla.ai",
           subtitle: "A copywriting tool loaded with artificial intelligence.",
           link: "https://www.dupla.ai/",
-          color: "bg-red-500",
+          color: "bg-red-500"
+        },
+        {
+          title: "Tweenvest",
+          subtitle: "A tool for analyzing the stock market (Still in beta).",
+          link: "https://www.tweenvest.com/",
+          color: "bg-purple-500"
         },
         {
           title: "Federated Learning Framework",
           subtitle:
             "Designed, implemented, and tested an algorithm for training a Convolutional Neural Network in a distributed manner (Federated Learning).",
           link: "https://github.com/gferrate/pytorch_federated_learning",
-          color: "bg-yellow-500",
+          color: "bg-yellow-500"
         },
         {
           title: "Bestwatch",
           subtitle:
             "Ranks all Netflix catalog from nearly all countries by IMDB rating. It amasses thousands of page visits.",
           link: "https://bestwatch.app/",
-          color: "bg-pink-500",
+          color: "bg-pink-500"
         },
         {
           title: "Drunk Translator",
           subtitle:
             "A prank webpage which simulates drunk behaviour. It accumulates tens of thousands of visits.",
           link: "https://www.drunk-translator.com/?lang=eng",
-          color: "bg-blue-500",
+          color: "bg-blue-500"
         },
         {
           title: "View Instagram Likes",
           subtitle:
             "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes for a given post.",
-          link: "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
-          color: "bg-pink-500",
+          link:
+            "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
+          color: "bg-pink-500"
         },
         {
           title: "Hodor",
           subtitle:
             "I engineered a system to open and close BMAT’s headquarter’s office with auth0 authentication and access control, taking geolocalisation into account.",
           link: "https://www.youtube.com/watch?v=_1j-8boMRDQ",
-          color: "bg-purple-500",
+          color: "bg-purple-500"
         },
         {
           title: "My Friend Is on Tinder",
           subtitle: "Prank website to create fake Tinder profiles.",
           link: "https://github.com/gferrate/my_friend_is_on_tinder",
-          color: "bg-indigo-500",
+          color: "bg-indigo-500"
         },
         {
           title: "The Bus Game",
           subtitle:
             "A classic Spanish cards game made online during the quarantine! The repo is open (click).",
           link: "https://github.com/gferrate/juego_del_bus",
-          color: "bg-green-500",
+          color: "bg-green-500"
         },
         {
           title: "Customize Windows Blue Error Screen",
           subtitle:
             "A prank website to customize the windows blue error screen.",
           link: "https://windows-blue-screen.netlify.app/",
-          color: "bg-blue-500",
-        },
-      ],
+          color: "bg-blue-500"
+        }
+      ]
     };
   },
   methods: {},
-  watch: {},
+  watch: {}
 };
 </script>
-
-<style>
-</style>
