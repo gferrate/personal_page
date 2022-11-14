@@ -2,7 +2,7 @@
   <svg
     :height="dimensions.height"
     :width="dimensions.width"
-    class="transform rotate-90 sm:rotate-0"
+    class="transform rotate-90 md:rotate-0"
   >
     <line
       x1="0"

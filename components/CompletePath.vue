@@ -3,22 +3,22 @@
     class="
       mt-5
       flex flex-col
-      sm:flex-row
+      md:flex-row
       justify-center
       items-center
       space-y-4
-      sm:space-y-0
+      md:space-y-0
     "
   >
     <LinePath :dashed="true" circles="right" />
     <div
       class="
         flex flex-col
-        sm:flex-row
+        md:flex-row
         justify-center
         items-center
         space-y-4
-        sm:space-y-0
+        md:space-y-0
       "
       v-for="(uni, index) in infos"
       :key="index"
@@ -35,8 +35,8 @@ export default {
   props: {
     infos: {
       type: Array,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>

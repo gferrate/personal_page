@@ -62,7 +62,9 @@
       <h2 class="text-sm mt-2 text-center px-4 text-gray-600">
         (Click any project to get more info)
       </h2>
-      <div class="flex justify-center w-full mt-6 flex-wrap">
+      <div
+        class="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 px-4"
+      >
         <project
           v-for="proj in projects"
           :color="proj.color"
@@ -84,10 +86,10 @@
       <CompletePath :infos="works" />
     </section>
 
-    <section id="these-are-my-academic-distinctions" class="py-5 relative">
+    <!--<section id="these-are-my-academic-distinctions" class="py-5 relative">
       <Title class="">These are my academic awards:</Title>
       <CompletePath :infos="awards" />
-    </section>
+    </section>-->
 
     <section
       id="like-what-you-see"
@@ -304,13 +306,19 @@ export default {
           color: "bg-blue-500"
         },
         {
-          title: "View Instagram Likes",
-          subtitle:
-            "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes for a given post.",
-          link:
-            "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
+          title: "Whalfred",
+          subtitle: "Create and receive reminders directly from Whatsapp.",
+          link: "https://whalfred.com/",
           color: "bg-pink-500"
         },
+        //{
+        //  title: "View Instagram Likes",
+        //  subtitle:
+        //    "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes for a given post.",
+        //  link:
+        //    "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
+        //  color: "bg-pink-500"
+        //},
         {
           title: "Hodor",
           subtitle:

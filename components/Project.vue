@@ -1,11 +1,11 @@
 <template>
   <div
     class="
-      w-64
-      h-44
+      w-full
+      h-full
       bg-gray-100
       rounded-xl
-      p-2
+      p-4
       shadow-md
       cursor-pointer
       hover:shadow-lg
@@ -15,19 +15,19 @@
       ease-in-out
       transform
       relative
-      hover:rotate-6
+      hover:md:rotate-6
+      hover:rotate-2
       overflow-hidden
       group
-      m-3
       select-none
     "
     @click="open()"
   >
     <BackgroundFigure v-for="n in 4" :key="n" :color="color" />
-    <div class="z-10 relative text-base text-left font-bold">
+    <div class="text-base text-left font-bold">
       {{ title | capitalize }}
     </div>
-    <div class="z-10 relative text-sm text-left text-gray-900 mt-1">
+    <div class="text-sm text-left text-gray-900 mt-2">
       {{ subtitle }}
     </div>
   </div>
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  data: function () {
+  data: function() {
     return {};
   },
   props: ["title", "subtitle", "link", "color"],
@@ -48,19 +48,19 @@ export default {
     open() {
       var link = this.link;
       if (this.isMobile()) {
-        setTimeout(function () {
+        setTimeout(function() {
           window.open(link, "_blank").focus();
         }, 500);
       } else {
         window.open(link, "_blank").focus();
       }
-    },
+    }
   },
   filters: {
-    capitalize: function (value) {
+    capitalize: function(value) {
       if (!value) return "";
       return value.toUpperCase();
-    },
-  },
+    }
+  }
 };
 </script>
