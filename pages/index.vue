@@ -134,6 +134,7 @@ import purdueLogo from "~/assets/img/purdue_logo.png";
 import kingsLogo from "~/assets/img/kings_logo.jpeg";
 import caixaLogo from "~/assets/img/caixabank_logo.png";
 import bmatLogo from "~/assets/img/bmat_logo.jpeg";
+import lumoLogo from "~/assets/img/lumo_small_bg_white.png";
 import personalProjectsLogo from "~/assets/img/personal_projects_logo.png";
 import texasInstrumentsLogo from "~/assets/img/texas_instruments.jpg";
 
@@ -151,6 +152,7 @@ export default {
         kingsLogo: kingsLogo,
         caixaLogo: caixaLogo,
         bmatLogo: bmatLogo,
+        lumoLogo,
         personalProjectsLogo: personalProjectsLogo,
         texasInstrumentsLogo: texasInstrumentsLogo
       },
@@ -217,6 +219,15 @@ export default {
           color: "bg-green-500",
           href: "https://www.bmat.com/",
           image: bmatLogo
+        },
+        {
+          name: "Lumo",
+          degree: "Software Engineer",
+          country: "Barcelona",
+          year: 2022,
+          color: "bg-red-500",
+          href: "https://www.lumo.homes/",
+          image: lumoLogo
         }
       ],
       unis: [
