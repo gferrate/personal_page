@@ -2,8 +2,7 @@
   <div>
     <section id="this-is-me" class="py-6">
       <div class="flex flex-col md:flex-row justify-center items-center mt-5">
-        <div
-          class="
+        <div class="
             flex flex-col-reverse
             md:flex-row
             justify-center
@@ -12,10 +11,8 @@
             md:space-y-0
             space-x-0
             md:space-x-4
-          "
-        >
-          <div
-            class="
+          ">
+          <div class="
               mt-4
               md:mt-0
               flex
@@ -27,20 +24,14 @@
               md:space-y-2
               space-x-2
               md:space-x-0
-            "
-          >
+            ">
             <me size="sm" :img-path="images.email" :href="links.email"></me>
-            <me
-              size="sm"
-              :img-path="images.linkedin"
-              :href="links.linkedin"
-            ></me>
+            <me size="sm" :img-path="images.linkedin" :href="links.linkedin"></me>
             <me size="sm" :img-path="images.github" :href="links.github"></me>
           </div>
           <me size="lg" :img-path="images.me"></me>
         </div>
-        <div
-          class="
+        <div class="
             max-w-md
             px-4
             mt-6
@@ -50,8 +41,7 @@
             md:ml-5
             text-sm text-justify
             md:text-left
-          "
-        >
+          ">
           <Bio :bio="bio" />
         </div>
       </div>
@@ -62,17 +52,9 @@
       <h2 class="text-sm mt-2 text-center px-4 text-gray-600">
         (Click any project to get more info)
       </h2>
-      <div
-        class="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 px-4"
-      >
-        <project
-          v-for="proj in projects"
-          :color="proj.color"
-          :key="proj.title"
-          :title="proj.title"
-          :subtitle="proj.subtitle"
-          :link="proj.link"
-        />
+      <div class="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 px-4">
+        <project v-for="proj in projects" :color="proj.color" :key="proj.title" :title="proj.title"
+          :subtitle="proj.subtitle" :link="proj.link" />
       </div>
     </section>
 
@@ -91,12 +73,8 @@
       <CompletePath :infos="awards" />
     </section>-->
 
-    <section
-      id="like-what-you-see"
-      class="py-8 text-center text-gray-500 text-sm"
-    >
-      <div
-        class="
+    <section id="like-what-you-see" class="py-8 text-center text-gray-500 text-sm">
+      <div class="
           mx-auto
           border-t
           pt-8
@@ -107,16 +85,10 @@
           md:flex-row
           space-y-4
           md:space-y-0
-        "
-      >
+        ">
         <p>
           Like what you see?
-          <a
-            class="underline"
-            href="https://github.com/gferrate/personal_page"
-            target="_blank"
-            >Fork it on Github</a
-          >
+          <a class="underline" href="https://github.com/gferrate/personal_page" target="_blank">Fork it on Github</a>
         </p>
         <p>Gabriel Ferraté, {{ currentYear }}</p>
       </div>
@@ -139,7 +111,7 @@ import personalProjectsLogo from "~/assets/img/personal_projects_logo.png";
 import texasInstrumentsLogo from "~/assets/img/texas_instruments.jpg";
 
 export default {
-  data: function() {
+  data: function () {
     return {
       currentYear: new Date().getFullYear(),
       images: {
@@ -308,6 +280,13 @@ export default {
             "Ranks all Netflix catalog from nearly all countries by IMDB rating. It amasses thousands of page visits.",
           link: "https://bestwatch.app/",
           color: "bg-pink-500"
+        },
+        {
+          title: "Daily records",
+          subtitle:
+            "A design-focused website to map pictures to a timeline.",
+          link: "https://daily-records.netlify.app/",
+          color: "bg-red-500"
         },
         {
           title: "Drunk Translator",
