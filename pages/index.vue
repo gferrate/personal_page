@@ -262,6 +262,12 @@ export default {
           color: "bg-red-500"
         },
         {
+          title: "QR Blend",
+          subtitle: "The first AI QR code generator in the world.",
+          link: "https://www.qrblend.com/",
+          color: "bg-green-500"
+        },
+        {
           title: "Tweenvest",
           subtitle: "A tool for analyzing the stock market (Still in beta).",
           link: "https://www.tweenvest.com/",
@@ -322,13 +328,13 @@ export default {
           link: "https://github.com/gferrate/my_friend_is_on_tinder",
           color: "bg-indigo-500"
         },
-        {
-          title: "The Bus Game",
-          subtitle:
-            "A classic Spanish cards game made online during the quarantine! The repo is open (click).",
-          link: "https://github.com/gferrate/juego_del_bus",
-          color: "bg-green-500"
-        },
+        //{
+        //  title: "The Bus Game",
+        //  subtitle:
+        //    "A classic Spanish cards game made online during the quarantine! The repo is open (click).",
+        //  link: "https://github.com/gferrate/juego_del_bus",
+        //  color: "bg-green-500"
+        //},
         {
           title: "Customize Windows Blue Error Screen",
           subtitle:
