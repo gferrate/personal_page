@@ -58,15 +58,16 @@
       </div>
     </section>
 
+    <section id="this-is-my-work-experience" class="py-5 relative">
+      <Title class="">These are my work experiences:</Title>
+      <CompletePath :infos="works" />
+    </section>
+
     <section id="this-is-my-path" class="py-5 relative">
       <Title class="">This is my academic path:</Title>
       <CompletePath :infos="unis" />
     </section>
 
-    <section id="this-is-my-work-experience" class="py-5 relative">
-      <Title class="">These are my work experiences:</Title>
-      <CompletePath :infos="works" />
-    </section>
 
     <!--<section id="these-are-my-academic-distinctions" class="py-5 relative">
       <Title class="">These are my academic awards:</Title>
@@ -105,8 +106,9 @@ import upcLogo from "~/assets/img/upc_logo.png";
 import purdueLogo from "~/assets/img/purdue_logo.png";
 import kingsLogo from "~/assets/img/kings_logo.jpeg";
 import caixaLogo from "~/assets/img/caixabank_logo.png";
+import tweenvestLogo from "~/assets/img/tweenvest_logo.png";
 import bmatLogo from "~/assets/img/bmat_logo.jpeg";
-import lumoLogo from "~/assets/img/lumo_small_bg_white.png";
+import aldaraLogo from "~/assets/img/aldara.png";
 import personalProjectsLogo from "~/assets/img/personal_projects_logo.png";
 import texasInstrumentsLogo from "~/assets/img/texas_instruments.jpg";
 
@@ -119,12 +121,13 @@ export default {
         linkedin: linkedinImg,
         email: emailLogo,
         github: githubLogo,
-        upcLogo: upcLogo,
-        purdueLogo: purdueLogo,
-        kingsLogo: kingsLogo,
-        caixaLogo: caixaLogo,
-        bmatLogo: bmatLogo,
-        lumoLogo,
+        upcLogo,
+        purdueLogo,
+        kingsLogo,
+        caixaLogo,
+        bmatLogo,
+        tweenvestLogo: tweenvestLogo,
+        aldaraLogo,
         personalProjectsLogo: personalProjectsLogo,
         texasInstrumentsLogo: texasInstrumentsLogo
       },
@@ -174,15 +177,15 @@ export default {
           href: "https://www.caixabank.es/",
           image: caixaLogo
         },
-        {
-          name: "Personal Projects",
-          degree: "All kinds of things",
-          country: "The Globe",
-          year: 2015,
-          color: "bg-gray-500",
-          href: "https://github.com/gferrate",
-          image: personalProjectsLogo
-        },
+        // {
+        //   name: "Personal Projects",
+        //   degree: "All kinds of things",
+        //   country: "The Globe",
+        //   year: 2015,
+        //   color: "bg-gray-500",
+        //   href: "https://github.com/gferrate",
+        //   image: personalProjectsLogo
+        // },
         {
           name: "BMAT Music Innovators",
           degree: "Software Engineer",
@@ -193,13 +196,22 @@ export default {
           image: bmatLogo
         },
         {
-          name: "Lumo",
+          name: "Tweenvest",
+          degree: "Co-founder and CTO",
+          country: "Barcelona",
+          year: 2022,
+          color: "bg-gray-500",
+          href: "https://www.tweenvest.com/",
+          image: tweenvestLogo
+        },
+        {
+          name: "Aldara (YC S22)",
           degree: "Software Engineer",
           country: "Barcelona",
           year: 2022,
           color: "bg-red-500",
-          href: "https://www.lumo.homes/",
-          image: lumoLogo
+          href: "https://www.aldara.com/",
+          image: aldaraLogo
         }
       ],
       unis: [
@@ -256,10 +268,10 @@ export default {
           color: "bg-gray-500"
         },
         {
-          title: "dupla.ai",
-          subtitle: "A copywriting tool loaded with artificial intelligence.",
-          link: "https://www.dupla.ai/",
-          color: "bg-red-500"
+          title: "Tweenvest",
+          subtitle: "A tool for analyzing the stock market.",
+          link: "https://www.tweenvest.com/",
+          color: "bg-purple-500"
         },
         {
           title: "QR Blend",
@@ -268,10 +280,10 @@ export default {
           color: "bg-green-500"
         },
         {
-          title: "Tweenvest",
-          subtitle: "A tool for analyzing the stock market (Still in beta).",
-          link: "https://www.tweenvest.com/",
-          color: "bg-purple-500"
+          title: "dupla.ai",
+          subtitle: "A copywriting tool loaded with artificial intelligence.",
+          link: "https://www.dupla.ai/",
+          color: "bg-red-500"
         },
         {
           title: "Federated Learning Framework",
