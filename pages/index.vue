@@ -2,46 +2,17 @@
   <div>
     <section id="this-is-me" class="py-6">
       <div class="flex flex-col md:flex-row justify-center items-center mt-5">
-        <div class="
-            flex flex-col-reverse
-            md:flex-row
-            justify-center
-            items-center
-            space-y-4
-            md:space-y-0
-            space-x-0
-            md:space-x-4
-          ">
-          <div class="
-              mt-4
-              md:mt-0
-              flex
-              justify-center
-              items-center
-              flex-row
-              md:flex-col
-              space-y-0
-              md:space-y-2
-              space-x-2
-              md:space-x-0
-            ">
+        <div
+          class="flex flex-col-reverse md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+          <div
+            class="mt-4 md:mt-0 flex justify-center items-center flex-row md:flex-col space-y-0 md:space-y-2 space-x-2 md:space-x-0">
             <me size="sm" :img-path="images.email" :href="links.email"></me>
             <me size="sm" :img-path="images.linkedin" :href="links.linkedin"></me>
             <me size="sm" :img-path="images.github" :href="links.github"></me>
           </div>
           <me size="lg" :img-path="images.me"></me>
         </div>
-        <div class="
-            max-w-md
-            px-4
-            mt-6
-            md:mt-0
-            md:p-0
-            ml-0
-            md:ml-5
-            text-sm text-justify
-            md:text-left
-          ">
+        <div class="max-w-md px-4 mt-6 md:mt-0 md:p-0 ml-0 md:ml-5 text-sm text-justify md:text-left">
           <Bio :bio="bio" />
         </div>
       </div>
@@ -52,9 +23,9 @@
       <h2 class="text-sm mt-2 text-center px-4 text-gray-600">
         (Click any project to get more info)
       </h2>
-      <div class="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 px-4">
+      <div class="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 px-4">
         <project v-for="proj in projects" :color="proj.color" :key="proj.title" :title="proj.title"
-          :subtitle="proj.subtitle" :link="proj.link" />
+          :starred="proj.starred" :subtitle="proj.subtitle" :link="proj.link" :isNew="proj.isNew" />
       </div>
     </section>
 
@@ -75,18 +46,7 @@
     </section>-->
 
     <section id="like-what-you-see" class="py-8 text-center text-gray-500 text-sm">
-      <div class="
-          mx-auto
-          border-t
-          pt-8
-          flex
-          justify-between
-          items-center
-          flex-col
-          md:flex-row
-          space-y-4
-          md:space-y-0
-        ">
+      <div class="mx-auto border-t pt-8 flex justify-between items-center flex-col md:flex-row space-y-4 md:space-y-0">
         <p>
           Like what you see?
           <a class="underline" href="https://github.com/gferrate/personal_page" target="_blank">Fork it on Github</a>
@@ -256,32 +216,43 @@ export default {
         {
           title: "Royalties Calculator",
           subtitle:
-            "This tool enables you to search for any musician and it approximates how much money generates on royalties on all the major streaming platforms. It has hundreds of thousands of page visits.",
+            "This tool enables you to search for any musician and approximates how much money they generate in royalties across all major streaming platforms. It has hundreds of thousands of page visits.",
           link: "https://royalties-calculator.com/",
-          color: "bg-indigo-500"
+          color: "bg-indigo-500",
+          starred: true
         },
         {
-          title: "Analog Synthesiser and 8-Step sequencer",
+          title: "Analog Synthesizer and 8-Step Sequencer",
           subtitle:
-            "Designed a full size analog synthesizer and a 8-step sequencer as my final thesis at Purdue University.",
+            "Designed a full-size analog synthesizer and an 8-step sequencer as my final thesis at Purdue University.",
           link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
-          color: "bg-gray-500"
+          color: "bg-gray-500",
+          starred: true
+        },
+        {
+          title: "Track Trivia",
+          subtitle: "A multiplayer music trivia game where players can guess songs.",
+          link: "https://www.track-trivia.com/",
+          color: "bg-red-500",
+          isNew: true
         },
         {
           title: "Tweenvest",
           subtitle: "A tool for analyzing the stock market.",
           link: "https://www.tweenvest.com/",
-          color: "bg-purple-500"
+          color: "bg-purple-500",
+          starred: true
         },
         {
           title: "QR Blend",
-          subtitle: "The first AI QR code generator in the world.",
+          subtitle: "The first AI-powered QR code generator in the world.",
           link: "https://www.qrblend.com/",
-          color: "bg-green-500"
+          color: "bg-green-500",
+          starred: true
         },
         {
           title: "dupla.ai",
-          subtitle: "A copywriting tool loaded with artificial intelligence.",
+          subtitle: "A copywriting tool powered by artificial intelligence.",
           link: "https://www.dupla.ai/",
           color: "bg-red-500"
         },
@@ -295,65 +266,45 @@ export default {
         {
           title: "Bestwatch",
           subtitle:
-            "Ranks all Netflix catalog from nearly all countries by IMDB rating. It amasses thousands of page visits.",
+            "Ranks the entire Netflix catalog from nearly all countries by IMDb rating. It attracts thousands of page visits.",
           link: "https://bestwatch.app/",
           color: "bg-pink-500"
         },
         {
-          title: "Daily records",
+          title: "Daily Records",
           subtitle:
-            "A design-focused website to map pictures to a timeline.",
+            "A design-focused website for mapping pictures to a timeline.",
           link: "https://daily-records.netlify.app/",
           color: "bg-red-500"
         },
         {
           title: "Drunk Translator",
           subtitle:
-            "A prank webpage which simulates drunk behaviour. It accumulates tens of thousands of visits.",
+            "A prank webpage simulating drunk behavior. It has accumulated tens of thousands of visits.",
           link: "https://www.drunk-translator.com/?lang=eng",
           color: "bg-blue-500"
         },
         {
           title: "Whalfred",
-          subtitle: "Create and receive reminders directly from Whatsapp.",
+          subtitle: "Create and receive reminders directly on WhatsApp.",
           link: "https://whalfred.com/",
-          color: "bg-pink-500"
+          color: "bg-pink-500",
+          starred: true
         },
-        //{
-        //  title: "View Instagram Likes",
-        //  subtitle:
-        //    "Designed a workaround to defeat Instagram’s new policy of not showing the number of likes for a given post.",
-        //  link:
-        //    "https://github.com/gferrate/personal_projects/tree/master/instagram_likes",
-        //  color: "bg-pink-500"
-        //},
         {
           title: "Hodor",
           subtitle:
-            "I engineered a system to open and close BMAT’s headquarter’s office with auth0 authentication and access control, taking geolocalisation into account.",
+            "Engineered a system to open and close BMAT’s headquarters' office with Auth0 authentication and access control, integrating geolocation.",
           link: "https://www.youtube.com/watch?v=_1j-8boMRDQ",
           color: "bg-purple-500"
         },
-        //{
-        //  title: "My Friend Is on Tinder",
-        //  subtitle: "Prank website to create fake Tinder profiles.",
-        //  link: "https://github.com/gferrate/my_friend_is_on_tinder",
-        //  color: "bg-indigo-500"
-        //},
-        //{
-        //  title: "The Bus Game",
-        //  subtitle:
-        //    "A classic Spanish cards game made online during the quarantine! The repo is open (click).",
-        //  link: "https://github.com/gferrate/juego_del_bus",
-        //  color: "bg-green-500"
-        //},
         {
           title: "Customize Windows Blue Error Screen",
           subtitle:
-            "A prank website to customize the windows blue error screen.",
+            "A prank website for customizing the Windows blue error screen.",
           link: "https://windows-blue-screen.netlify.app/",
           color: "bg-blue-500"
-        }
+        },
       ]
     };
   },
