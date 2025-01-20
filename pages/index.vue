@@ -93,7 +93,7 @@ export default {
       },
       links: {
         linkedin: "https://www.linkedin.com/in/gferrate/",
-        email: "mailto:g.ferrate.c@gmail.com",
+        email: "mailto:hello@gabrielferrate.com",
         github: "https://github.com/gferrate"
       },
       bio: {
