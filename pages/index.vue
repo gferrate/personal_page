@@ -251,6 +251,20 @@ export default {
           starred: true
         },
         {
+          title: "Whalfred",
+          subtitle: "Create and receive reminders directly on WhatsApp.",
+          link: "https://whalfred.com/",
+          color: "bg-pink-500",
+          starred: true
+        },
+        {
+          title: "Meet me",
+          subtitle: "Create unique links for your meetings.",
+          link: "https://meet-me.co/",
+          color: "bg-green-500",
+          isNew: true
+        },
+        {
           title: "dupla.ai",
           subtitle: "A copywriting tool powered by artificial intelligence.",
           link: "https://www.dupla.ai/",
@@ -283,13 +297,6 @@ export default {
             "A prank webpage simulating drunk behavior. It has accumulated tens of thousands of visits.",
           link: "https://www.drunk-translator.com/?lang=eng",
           color: "bg-blue-500"
-        },
-        {
-          title: "Whalfred",
-          subtitle: "Create and receive reminders directly on WhatsApp.",
-          link: "https://whalfred.com/",
-          color: "bg-pink-500",
-          starred: true
         },
         {
           title: "Hodor",
