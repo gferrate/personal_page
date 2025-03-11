@@ -170,7 +170,7 @@ export default {
           country: "Barcelona",
           year: 2022,
           color: "bg-red-500",
-          href: "https://www.aldara.com/",
+          href: "https://www.ycombinator.com/companies/aldara",
           image: aldaraLogo
         }
       ],
