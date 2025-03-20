@@ -67,6 +67,7 @@ import purdueLogo from "~/assets/img/purdue_logo.png";
 import kingsLogo from "~/assets/img/kings_logo.jpeg";
 import caixaLogo from "~/assets/img/caixabank_logo.png";
 import tweenvestLogo from "~/assets/img/tweenvest_logo.png";
+import datadogLogo from "~/assets/img/datadog_logo.png";
 import bmatLogo from "~/assets/img/bmat_logo.jpeg";
 import aldaraLogo from "~/assets/img/aldara.png";
 import personalProjectsLogo from "~/assets/img/personal_projects_logo.png";
@@ -87,6 +88,7 @@ export default {
         caixaLogo,
         bmatLogo,
         tweenvestLogo: tweenvestLogo,
+        datadogLogo,
         aldaraLogo,
         personalProjectsLogo: personalProjectsLogo,
         texasInstrumentsLogo: texasInstrumentsLogo
@@ -156,6 +158,15 @@ export default {
           image: bmatLogo
         },
         {
+          name: "Aldara (YC S22)",
+          degree: "Senior Software Engineer",
+          country: "Barcelona",
+          year: 2022,
+          color: "bg-red-500",
+          href: "https://www.ycombinator.com/companies/aldara",
+          image: aldaraLogo
+        },
+        {
           name: "Tweenvest",
           degree: "Co-founder and CTO",
           country: "Barcelona",
@@ -165,14 +176,14 @@ export default {
           image: tweenvestLogo
         },
         {
-          name: "Aldara (YC S22)",
-          degree: "Senior Software Engineer",
-          country: "Barcelona",
-          year: 2022,
-          color: "bg-red-500",
-          href: "https://www.ycombinator.com/companies/aldara",
-          image: aldaraLogo
-        }
+          name: "Datadog",
+          degree: "Software Engineer II",
+          country: "Madrid",
+          year: 2024,
+          color: "bg-yellow-500",
+          href: "https://www.datadoghq.com/",
+          image: datadogLogo
+        },
       ],
       unis: [
         {
