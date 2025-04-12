@@ -179,7 +179,7 @@ export default {
           name: "Datadog",
           degree: "Software Engineer II",
           country: "Madrid",
-          year: 2024,
+          year: 2025,
           color: "bg-purple-500",
           href: "https://www.datadoghq.com/",
           image: datadogLogo
