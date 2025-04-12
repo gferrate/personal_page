@@ -103,7 +103,7 @@ export default {
         paragraphs: [
           "I am Gabriel Ferraté, a Barcelona-born, globally-based engineer and music nerd.",
           "I love to create things, either hardware or software, robots or websites, useless or useful. You name it.",
-          "Most of my experience is on backend technologies and databases, but I also like to tinker with artificial intelligence, electronics, frontend development, and other cool stuff.",
+          "Most of my experience is on distributed systems and databases, but I also like to tinker with artificial intelligence, electronics, frontend development, and other cool stuff.",
           "Scroll down to discover me. See you soon!"
         ]
       },
