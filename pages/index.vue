@@ -3,16 +3,24 @@
     <section id="this-is-me" class="py-6">
       <div class="flex flex-col md:flex-row justify-center items-center mt-5">
         <div
-          class="flex flex-col-reverse md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+          class="flex flex-col-reverse md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4"
+        >
           <div
-            class="mt-4 md:mt-0 flex justify-center items-center flex-row md:flex-col space-y-0 md:space-y-2 space-x-2 md:space-x-0">
+            class="mt-4 md:mt-0 flex justify-center items-center flex-row md:flex-col space-y-0 md:space-y-2 space-x-2 md:space-x-0"
+          >
             <me size="sm" :img-path="images.email" :href="links.email"></me>
-            <me size="sm" :img-path="images.linkedin" :href="links.linkedin"></me>
+            <me
+              size="sm"
+              :img-path="images.linkedin"
+              :href="links.linkedin"
+            ></me>
             <me size="sm" :img-path="images.github" :href="links.github"></me>
           </div>
           <me size="lg" :img-path="images.me"></me>
         </div>
-        <div class="max-w-md px-4 mt-6 md:mt-0 md:p-0 ml-0 md:ml-5 text-sm text-justify md:text-left">
+        <div
+          class="max-w-md px-4 mt-6 md:mt-0 md:p-0 ml-0 md:ml-5 text-sm text-justify md:text-left"
+        >
           <Bio :bio="bio" />
         </div>
       </div>
@@ -23,9 +31,19 @@
       <h2 class="text-sm mt-2 text-center px-4 text-gray-600">
         (Click any project to get more info)
       </h2>
-      <div class="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 px-4">
-        <project v-for="proj in projects" :color="proj.color" :key="proj.title" :title="proj.title"
-          :starred="proj.starred" :subtitle="proj.subtitle" :link="proj.link" :isNew="proj.isNew" />
+      <div
+        class="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 px-4"
+      >
+        <project
+          v-for="proj in projects"
+          :color="proj.color"
+          :key="proj.title"
+          :title="proj.title"
+          :starred="proj.starred"
+          :subtitle="proj.subtitle"
+          :link="proj.link"
+          :isNew="proj.isNew"
+        />
       </div>
     </section>
 
@@ -39,17 +57,26 @@
       <CompletePath :infos="unis" />
     </section>
 
-
     <!--<section id="these-are-my-academic-distinctions" class="py-5 relative">
       <Title class="">These are my academic awards:</Title>
       <CompletePath :infos="awards" />
     </section>-->
 
-    <section id="like-what-you-see" class="py-8 text-center text-gray-500 text-sm">
-      <div class="mx-auto border-t pt-8 flex justify-between items-center flex-col md:flex-row space-y-4 md:space-y-0">
+    <section
+      id="like-what-you-see"
+      class="py-8 text-center text-gray-500 text-sm"
+    >
+      <div
+        class="mx-auto border-t pt-8 flex justify-between items-center flex-col md:flex-row space-y-4 md:space-y-0"
+      >
         <p>
           Like what you see?
-          <a class="underline" href="https://github.com/gferrate/personal_page" target="_blank">Fork it on Github</a>
+          <a
+            class="underline"
+            href="https://github.com/gferrate/personal_page"
+            target="_blank"
+            >Fork it on Github</a
+          >
         </p>
         <p>Gabriel Ferraté, {{ currentYear }}</p>
       </div>
@@ -91,12 +118,12 @@ export default {
         datadogLogo,
         aldaraLogo,
         personalProjectsLogo: personalProjectsLogo,
-        texasInstrumentsLogo: texasInstrumentsLogo
+        texasInstrumentsLogo: texasInstrumentsLogo,
       },
       links: {
         linkedin: "https://www.linkedin.com/in/gferrate/",
         email: "mailto:hello@gabrielferrate.com",
-        github: "https://github.com/gferrate"
+        github: "https://github.com/gferrate",
       },
       bio: {
         title: "Hi there! Welcome to my site,",
@@ -104,8 +131,8 @@ export default {
           "I am Gabriel Ferraté, a Barcelona-born, globally-based engineer and music nerd.",
           "I love to create things, either hardware or software, robots or websites, useless or useful. You name it.",
           "Most of my experience is on distributed systems and databases, but I also like to tinker with artificial intelligence, electronics, frontend development, and other cool stuff.",
-          "Scroll down to discover me. See you soon!"
-        ]
+          "Scroll down to discover me. See you soon!",
+        ],
       },
       awards: [
         {
@@ -114,9 +141,8 @@ export default {
           country: "United States",
           year: 2018,
           color: "bg-yellow-500",
-          href:
-            "https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards",
-          image: purdueLogo
+          href: "https://engineering.purdue.edu/ECE/News/2019/ohmonics-senior-design-awards",
+          image: purdueLogo,
         },
         {
           name: "Texas Instruments Senior Design Contest",
@@ -124,10 +150,9 @@ export default {
           country: "United States",
           year: 2018,
           color: "bg-red-500",
-          href:
-            "https://www.facebook.com/texasinstruments/videos/395457504534454/",
-          image: texasInstrumentsLogo
-        }
+          href: "https://www.facebook.com/texasinstruments/videos/395457504534454/",
+          image: texasInstrumentsLogo,
+        },
       ],
       works: [
         {
@@ -137,7 +162,7 @@ export default {
           year: 2017,
           color: "bg-blue-500",
           href: "https://www.caixabank.es/",
-          image: caixaLogo
+          image: caixaLogo,
         },
         // {
         //   name: "Personal Projects",
@@ -155,7 +180,7 @@ export default {
           year: 2017,
           color: "bg-green-500",
           href: "https://www.bmat.com/",
-          image: bmatLogo
+          image: bmatLogo,
         },
         {
           name: "Aldara (YC S22)",
@@ -164,7 +189,7 @@ export default {
           year: 2022,
           color: "bg-red-500",
           href: "https://www.ycombinator.com/companies/aldara",
-          image: aldaraLogo
+          image: aldaraLogo,
         },
         {
           name: "Tweenvest",
@@ -173,7 +198,7 @@ export default {
           year: 2022,
           color: "bg-gray-500",
           href: "https://www.tweenvest.com/",
-          image: tweenvestLogo
+          image: tweenvestLogo,
         },
         {
           name: "Datadog",
@@ -182,7 +207,7 @@ export default {
           year: 2025,
           color: "bg-purple-500",
           href: "https://www.datadoghq.com/",
-          image: datadogLogo
+          image: datadogLogo,
         },
       ],
       unis: [
@@ -193,7 +218,7 @@ export default {
           year: 2014,
           color: "bg-blue-500",
           href: "https://telecos.upc.edu/en?set_language=en",
-          image: upcLogo
+          image: upcLogo,
         },
         {
           name: "Purdue University",
@@ -202,7 +227,7 @@ export default {
           year: 2018,
           color: "bg-yellow-500",
           href: "https://engineering.purdue.edu/ECE",
-          image: purdueLogo
+          image: purdueLogo,
         },
         {
           name: "Polytechnic University of Catalonia",
@@ -211,7 +236,7 @@ export default {
           year: 2019,
           color: "bg-blue-500",
           href: "https://matt.masters.upc.edu/",
-          image: upcLogo
+          image: upcLogo,
         },
         {
           name: "King's College London",
@@ -220,8 +245,8 @@ export default {
           year: 2020,
           color: "bg-red-500",
           href: "https://www.kcl.ac.uk/research/ctr",
-          image: kingsLogo
-        }
+          image: kingsLogo,
+        },
       ],
       projects: [
         {
@@ -230,7 +255,7 @@ export default {
             "This tool enables you to search for any musician and approximates how much money they generate in royalties across all major streaming platforms. It has hundreds of thousands of page visits.",
           link: "https://royalties-calculator.com/",
           color: "bg-indigo-500",
-          starred: true
+          starred: true,
         },
         {
           title: "Analog Synthesizer and 8-Step Sequencer",
@@ -238,95 +263,104 @@ export default {
             "Designed a full-size analog synthesizer and an 8-step sequencer as my final thesis at Purdue University.",
           link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
           color: "bg-gray-500",
-          starred: true
+          starred: true,
         },
         {
           title: "Track Trivia",
-          subtitle: "A multiplayer music trivia game where players can guess songs.",
+          subtitle:
+            "A multiplayer music trivia game where players can guess songs.",
           link: "https://www.track-trivia.com/",
           color: "bg-red-500",
-          isNew: true
+          isNew: true,
         },
         {
           title: "Tweenvest",
           subtitle: "A tool for analyzing the stock market.",
           link: "https://www.tweenvest.com/",
           color: "bg-purple-500",
-          starred: true
+          starred: true,
         },
         {
           title: "QR Blend",
           subtitle: "The first AI-powered QR code generator in the world.",
           link: "https://www.qrblend.com/",
           color: "bg-green-500",
-          starred: true
+          starred: true,
         },
         {
           title: "Whalfred",
           subtitle: "Create and receive reminders directly on WhatsApp.",
           link: "https://whalfred.com/",
           color: "bg-pink-500",
-          starred: true
+          starred: true,
         },
         {
           title: "Meet me",
           subtitle: "Create unique links for your meetings.",
           link: "https://meet-me.co/",
           color: "bg-green-500",
-          isNew: true
+          isNew: true,
         },
         {
           title: "dupla.ai",
           subtitle: "A copywriting tool powered by artificial intelligence.",
           link: "https://www.dupla.ai/",
-          color: "bg-red-500"
+          color: "bg-red-500",
+        },
+        {
+          title: "Infinite Canvas",
+          subtitle:
+            "The infinite canvas is an AI-generated image that extends endlessly in all directions. All changes you make are visible to everyone else in real time.",
+          link: "https://infinite-canvas.gabrielferrate.com/",
+          color: "bg-yellow-500",
+          isNew: true,
         },
         {
           title: "Federated Learning Framework",
           subtitle:
             "Designed, implemented, and tested an algorithm for training a Convolutional Neural Network in a distributed manner (Federated Learning).",
           link: "https://github.com/gferrate/pytorch_federated_learning",
-          color: "bg-yellow-500"
+          color: "bg-yellow-500",
         },
         {
           title: "Bestwatch",
           subtitle:
             "Ranks the entire Netflix catalog from nearly all countries by IMDb rating. It attracts thousands of page visits.",
           link: "https://bestwatch.app/",
-          color: "bg-pink-500"
+          color: "bg-pink-500",
         },
         {
           title: "Daily Records",
           subtitle:
             "A design-focused website for mapping pictures to a timeline.",
           link: "https://daily-records.netlify.app/",
-          color: "bg-red-500"
+          color: "bg-red-500",
         },
         {
           title: "Drunk Translator",
           subtitle:
             "A prank webpage simulating drunk behavior. It has accumulated tens of thousands of visits.",
           link: "https://www.drunk-translator.com/?lang=eng",
-          color: "bg-blue-500"
+          color: "bg-blue-500",
         },
         {
           title: "Hodor",
           subtitle:
             "Engineered a system to open and close BMAT’s headquarters' office with Auth0 authentication and access control, integrating geolocation.",
           link: "https://www.youtube.com/watch?v=_1j-8boMRDQ",
-          color: "bg-purple-500"
+          color: "bg-purple-500",
         },
         {
           title: "Customize Windows Blue Error Screen",
           subtitle:
             "A prank website for customizing the Windows blue error screen.",
           link: "https://windows-blue-screen.netlify.app/",
-          color: "bg-blue-500"
+          color: "bg-blue-500",
         },
-      ]
+      ],
     };
   },
   methods: {},
-  watch: {}
+  watch: {},
 };
 </script>
