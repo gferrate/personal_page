@@ -1,6 +1,8 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: "Alliance";
-  src: url("~assets/fonts/alliance-no-2-regular.woff2") format("woff2");
+  src: url("/fonts/alliance-no-2-regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -8,4 +10,6 @@
 html,
 body {
   font-family: "Alliance", serif;
+  background: #ffffff;
+  color: #000000;
 }
