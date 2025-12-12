@@ -53,7 +53,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="p-4 max-w-6xl mx-auto hover:bg-gray-200 transition-all duration-500 rounded-xl"
+        className="p-4 max-w-6xl mx-auto hover:bg-gray-100 transition-all duration-500 rounded-xl hover:inset-shadow-sm"
       >
         <h1 className="text-2xl text-center mb-2">
           These are some of my projects
@@ -91,7 +91,7 @@ export default function Home() {
       {/* Work Experience Section */}
       <section
         id="work-experience"
-        className="p-4 max-w-6xl mx-auto hover:bg-gray-200 transition-all duration-500 rounded-xl"
+        className="p-4 max-w-6xl mx-auto hover:bg-gray-100 transition-all duration-500 rounded-xl hover:hover:inset-shadow-sm"
       >
         <h1 className="text-2xl text-center">These are my work experiences</h1>
         <Timeline items={works} />
@@ -100,7 +100,7 @@ export default function Home() {
       {/* Education Section */}
       <section
         id="education"
-        className="p-4 max-w-6xl mx-auto hover:bg-gray-200 transition-all duration-500 rounded-xl"
+        className="p-4 max-w-6xl mx-auto hover:bg-gray-100 transition-all duration-500 rounded-xl hover:hover:inset-shadow-sm"
       >
         <h1 className="text-2xl text-center">This is my academic path</h1>
         <Timeline items={education} />
