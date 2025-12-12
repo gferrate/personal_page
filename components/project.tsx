@@ -2,24 +2,12 @@
 
 import React from "react";
 import DecorativeBackground from "./decorative-background";
+import { ProjectT } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
-interface ProjectProps {
-  title: string;
-  subtitle: string;
-  link: string;
-  color: string;
-  starred?: boolean;
-  isNew?: boolean;
-}
+export default function Project({ project }: { project: ProjectT }) {
+  const { title, subtitle, link, color, pill } = project;
 
-export default function Project({
-  title,
-  subtitle,
-  link,
-  color,
-  starred,
-  isNew,
-}: ProjectProps) {
   const handleClick = () => {
     window.open(link, "_blank");
   };
@@ -27,16 +15,17 @@ export default function Project({
   return (
     <div
       onClick={handleClick}
-      className="w-full bg-gray-100 rounded-xl p-4 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition duration-500 ease-in-out transform hover:rotate-2 overflow-hidden group select-none relative"
+      className="w-full bg-white rounded-xl p-4 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition duration-500 ease-in-out transform hover:rotate-2 overflow-hidden group select-none relative"
     >
       {/* Badge */}
-      {(starred || isNew) && (
+      {(pill === "starred" || pill === "new") && (
         <div
-          className={`absolute top-0 right-0 text-xs rounded-bl-lg px-2 border-l border-gray-300 border-b z-10 py-px ${
-            isNew ? "bg-green-200" : "bg-yellow-200"
-          }`}
+          className={cn(
+            "absolute top-0 right-0 text-xs rounded-bl-lg px-2 border-l border-gray-300 border-b z-10 py-px",
+            pill === "new" ? "bg-green-200" : "bg-yellow-200"
+          )}
         >
-          {isNew ? "🎉 new" : "⭐️ starred"}
+          {pill === "new" ? "🎉 new" : "⭐️ starred"}
         </div>
       )}
 

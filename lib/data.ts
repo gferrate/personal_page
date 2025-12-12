@@ -8,63 +8,23 @@ export const bio = {
   ],
 } as const;
 
-export const projects = [
+export type ProjectT = {
+  title: string;
+  subtitle: string;
+  link: string;
+  color: string;
+  hiddenByDefault?: boolean;
+  pill?: "starred" | "new";
+};
+
+export const projects: ProjectT[] = [
   {
     title: "Royalties Calculator",
     subtitle:
       "This tool enables you to search for any musician and approximates how much money they generate in royalties across all major streaming platforms. It has hundreds of thousands of page visits.",
     link: "https://royalties-calculator.com/",
     color: "bg-indigo-500",
-    starred: true,
-  },
-  {
-    title: "Analog Synthesizer and 8-Step Sequencer",
-    subtitle:
-      "Designed a full-size analog synthesizer and an 8-step sequencer as my final thesis at Purdue University.",
-    link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
-    color: "bg-gray-500",
-    starred: true,
-  },
-  {
-    title: "Track Trivia",
-    subtitle: "A multiplayer music trivia game where players can guess songs.",
-    link: "https://www.track-trivia.com/",
-    color: "bg-red-500",
-    isNew: true,
-  },
-  {
-    title: "Tweenvest",
-    subtitle: "A tool for analyzing the stock market.",
-    link: "https://www.tweenvest.com/",
-    color: "bg-purple-500",
-    starred: true,
-  },
-  {
-    title: "QR Blend",
-    subtitle: "The first AI-powered QR code generator in the world.",
-    link: "https://www.qrblend.com/",
-    color: "bg-green-500",
-    starred: true,
-  },
-  {
-    title: "Whalfred",
-    subtitle: "Create and receive reminders directly on WhatsApp.",
-    link: "https://whalfred.com/",
-    color: "bg-pink-500",
-    starred: true,
-  },
-  {
-    title: "Meet me",
-    subtitle: "Create unique links for your meetings.",
-    link: "https://meet-me.co/",
-    color: "bg-green-500",
-    isNew: true,
-  },
-  {
-    title: "dupla.ai",
-    subtitle: "A copywriting tool powered by artificial intelligence.",
-    link: "https://www.dupla.ai/",
-    color: "bg-red-500",
+    pill: "starred",
   },
   {
     title: "Infinite Canvas",
@@ -72,7 +32,53 @@ export const projects = [
       "The infinite canvas is an AI-generated image that extends endlessly in all directions. All changes you make are visible to everyone else in real time.",
     link: "https://infinite-canvas.gabrielferrate.com/",
     color: "bg-yellow-500",
-    isNew: true,
+    pill: "new",
+  },
+  {
+    title: "Analog Synthesizer and 8-Step Sequencer",
+    subtitle:
+      "Designed a full-size analog synthesizer and an 8-step sequencer as my final thesis at Purdue University.",
+    link: "https://www.youtube.com/watch?v=xIo1AV4bAkE",
+    color: "bg-gray-500",
+  },
+  {
+    title: "QR Blend",
+    subtitle: "The first AI-powered QR code generator in the world.",
+    link: "https://www.qrblend.com/",
+    color: "bg-green-500",
+  },
+  {
+    title: "Track Trivia",
+    subtitle: "A multiplayer music trivia game where players can guess songs.",
+    link: "https://www.track-trivia.com/",
+    color: "bg-red-500",
+  },
+  // {
+  //   title: "Tweenvest",
+  //   subtitle: "A tool for analyzing the stock market.",
+  //   link: "https://www.tweenvest.com/",
+  //   color: "bg-purple-500",
+  //   starred: true,
+  // },
+  {
+    title: "Whalfred",
+    subtitle: "Create and receive reminders directly on WhatsApp.",
+    link: "https://whalfred.com/",
+    color: "bg-pink-500",
+    hiddenByDefault: true,
+  },
+  {
+    title: "Meet me",
+    subtitle: "Create unique links for your meetings.",
+    link: "https://meet-me.co/",
+    color: "bg-green-500",
+  },
+  {
+    title: "dupla.ai",
+    subtitle: "A copywriting tool powered by artificial intelligence.",
+    link: "https://www.dupla.ai/",
+    color: "bg-red-500",
+    hiddenByDefault: true,
   },
   {
     title: "Federated Learning Framework",
@@ -87,12 +93,14 @@ export const projects = [
       "Ranks the entire Netflix catalog from nearly all countries by IMDb rating. It attracts thousands of page visits.",
     link: "https://bestwatch.app/",
     color: "bg-pink-500",
+    hiddenByDefault: true,
   },
   {
     title: "Daily Records",
     subtitle: "A design-focused website for mapping pictures to a timeline.",
     link: "https://daily-records.netlify.app/",
     color: "bg-red-500",
+    hiddenByDefault: true,
   },
   {
     title: "Drunk Translator",

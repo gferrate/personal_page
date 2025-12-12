@@ -1,41 +1,40 @@
 import Bio from "@/components/bio";
 import Project from "@/components/project";
 import Timeline from "@/components/timeline";
+import SocialLink from "@/components/social-link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { bio, projects, works, education } from "@/lib/data";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 space-y-6 px-1">
       {/* Bio Section */}
-      <section id="this-is-me" className="py-6">
-        <div className="flex flex-col md:flex-row justify-center items-center mt-5 max-w-6xl mx-auto px-4">
+      <section id="this-is-me">
+        <div className="flex flex-col md:flex-row justify-center items-center max-w-6xl mx-auto">
           <div className="flex flex-col-reverse md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
             {/* Social Links */}
             <div className="mt-4 md:mt-0 flex justify-center items-center flex-row md:flex-col space-y-0 md:space-y-2 space-x-2 md:space-x-0">
-              <a
+              <SocialLink
                 href="mailto:hello@gabrielferrate.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-center bg-cover shadow-md hover:shadow-lg hover:rotate-6 hover:scale-105 transform duration-500 flex-none"
-                style={{ backgroundImage: "url('/images/email_icon.png')" }}
+                imageSrc="/images/email_icon.png"
+                alt="Email"
               />
-              <a
+              <SocialLink
                 href="https://www.linkedin.com/in/gferrate/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-center bg-cover shadow-md hover:shadow-lg hover:rotate-6 hover:scale-105 transform duration-500 flex-none"
-                style={{
-                  backgroundImage: "url('/images/linkedin_logo_sq.png')",
-                }}
+                imageSrc="/images/linkedin_logo_sq.png"
+                alt="LinkedIn"
               />
-              <a
+              <SocialLink
                 href="https://github.com/gferrate"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-center bg-cover shadow-md hover:shadow-lg hover:rotate-6 hover:scale-105 transform duration-500 flex-none"
-                style={{ backgroundImage: "url('/images/github_logo.png')" }}
+                imageSrc="/images/github_logo.png"
+                alt="GitHub"
               />
             </div>
             {/* Profile Picture */}
@@ -52,29 +51,58 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-6 max-w-6xl mx-auto px-4">
+      <section
+        id="projects"
+        className="p-4 max-w-6xl mx-auto hover:bg-gray-200 transition-all duration-500 rounded-xl"
+      >
         <h1 className="text-2xl text-center mb-2">
-          These are some of my projects:
+          These are some of my projects
         </h1>
         <h2 className="text-sm text-center text-gray-600">
           (Click any project to get more info)
         </h2>
         <div className="w-full mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
-          {projects.map((project) => (
-            <Project key={project.title} {...project} />
-          ))}
+          {projects
+            .filter((project) => !project.hiddenByDefault)
+            .map((project) => (
+              <Project key={project.title} project={project} />
+            ))}
+        </div>
+        <div className="w-full mt-2">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="older-projects" className="border-none">
+              <AccordionTrigger className="max-w-min">
+                <div className="text-nowrap">View older projects</div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="w-full mt-4 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+                  {projects
+                    .filter((project) => project.hiddenByDefault)
+                    .map((project) => (
+                      <Project key={project.title} project={project} />
+                    ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
       {/* Work Experience Section */}
-      <section id="work-experience" className="py-5 max-w-6xl mx-auto px-4">
-        <h1 className="text-2xl text-center">These are my work experiences:</h1>
+      <section
+        id="work-experience"
+        className="p-4 max-w-6xl mx-auto hover:bg-gray-200 transition-all duration-500 rounded-xl"
+      >
+        <h1 className="text-2xl text-center">These are my work experiences</h1>
         <Timeline items={works} />
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-5 max-w-6xl mx-auto px-4">
-        <h1 className="text-2xl text-center">This is my academic path:</h1>
+      <section
+        id="education"
+        className="p-4 max-w-6xl mx-auto hover:bg-gray-200 transition-all duration-500 rounded-xl"
+      >
+        <h1 className="text-2xl text-center">This is my academic path</h1>
         <Timeline items={education} />
       </section>
 
