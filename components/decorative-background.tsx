@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { cn } from "@/lib/utils";
 
 interface DecorativeBackgroundProps {
   color?: string;
@@ -20,7 +21,10 @@ export default function DecorativeBackground({
         return (
           <div
             key={i}
-            className={`absolute ${color} opacity-10 transform transition duration-500 group-hover:rotate-12 group-hover:scale-125 pointer-events-none`}
+            className={cn(
+              "absolute transform transition duration-500 group-hover:rotate-12 group-hover:scale-125 pointer-events-none backdrop-blur-lg bg-white/30 border border-white/40 shadow-lg opacity-10",
+              color
+            )}
             style={{
               width: isCircle ? `${size}px` : `${Math.random() * 80 + 40}px`,
               height: isCircle ? `${size}px` : `${Math.random() * 80 + 40}px`,

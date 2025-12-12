@@ -26,7 +26,7 @@ export default function ExperienceCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-48 bg-gray-100 rounded-xl p-3 flex flex-col items-start shadow-md hover:shadow-lg transition duration-500 relative overflow-hidden hover:rotate-6 hover:scale-105 transform group z-20 select-none text-gray-900"
+      className="w-48 bg-white rounded-xl p-3 flex flex-col items-start shadow-md hover:shadow-lg transition duration-500 relative overflow-hidden hover:rotate-6 hover:scale-105 transform group z-20 select-none text-gray-900"
     >
       <DecorativeBackground color={color} count={3} />
 
