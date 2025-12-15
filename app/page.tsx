@@ -56,7 +56,7 @@ export default function Home() {
         className="p-4 max-w-6xl mx-auto hover:bg-gray-100 transition-all duration-500 rounded-xl hover:inset-shadow-sm"
       >
         <h1 className="text-2xl text-center mb-2">
-          These are some of my projects
+          Some of my personal projects
         </h1>
         <h2 className="text-sm text-center text-gray-600">
           (Click any project to get more info)
@@ -93,7 +93,7 @@ export default function Home() {
         id="work-experience"
         className="p-4 max-w-6xl mx-auto hover:bg-gray-100 transition-all duration-500 rounded-xl hover:hover:inset-shadow-sm"
       >
-        <h1 className="text-2xl text-center">These are my work experiences</h1>
+        <h1 className="text-2xl text-center">My work experiences</h1>
         <Timeline items={works} />
       </section>
 
@@ -102,7 +102,7 @@ export default function Home() {
         id="education"
         className="p-4 max-w-6xl mx-auto hover:bg-gray-100 transition-all duration-500 rounded-xl hover:hover:inset-shadow-sm"
       >
-        <h1 className="text-2xl text-center">This is my academic path</h1>
+        <h1 className="text-2xl text-center">My academic path</h1>
         <Timeline items={education} />
       </section>
 
