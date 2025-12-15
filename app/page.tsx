@@ -14,7 +14,7 @@ export default function Home() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <main className="min-h-screen bg-gray-50 space-y-6 px-1">
+    <main className="min-h-screen bg-gray-50 space-y-6 px-1 pt-6">
       {/* Bio Section */}
       <section id="this-is-me">
         <div className="flex flex-col md:flex-row justify-center items-center max-w-6xl mx-auto">
