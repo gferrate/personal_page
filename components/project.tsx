@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import DecorativeBackground from "./decorative-background";
 import { ProjectT } from "@/lib/data";
@@ -8,14 +6,12 @@ import { cn } from "@/lib/utils";
 export default function Project({ project }: { project: ProjectT }) {
   const { title, subtitle, link, color, pill } = project;
 
-  const handleClick = () => {
-    window.open(link, "_blank");
-  };
-
   return (
-    <div
-      onClick={handleClick}
-      className="w-full bg-white rounded-xl p-4 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition duration-500 ease-in-out transform hover:rotate-2 overflow-hidden group select-none relative"
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full bg-white rounded-xl p-4 shadow-md hover:shadow-lg hover:scale-105 transition duration-500 ease-in-out transform hover:rotate-2 overflow-hidden group select-none relative block"
     >
       {/* Badge */}
       {(pill === "starred" || pill === "new") && (
@@ -35,6 +31,6 @@ export default function Project({ project }: { project: ProjectT }) {
         {title}
       </div>
       <div className="text-sm text-gray-800 mt-2 relative z-10">{subtitle}</div>
-    </div>
+    </a>
   );
 }

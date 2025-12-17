@@ -106,7 +106,7 @@ export const projects: ProjectT[] = [
     title: "Drunk Translator",
     subtitle:
       "A prank webpage simulating drunk behavior. It has accumulated tens of thousands of visits.",
-    link: "https://www.drunk-translator.com/?lang=eng",
+    link: "https://drunk-translator.com/?lang=eng",
     color: "bg-blue-500",
   },
   {
